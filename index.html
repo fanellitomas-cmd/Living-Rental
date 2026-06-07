@@ -3,28 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Living Rental — Alquiler de Muebles para Eventos · Buenos Aires</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--v:#7C3AED;--vd:#5B21B6;--vl:#A78BFA;--glow:rgba(124,58,237,0.28);--txt:#0f0a1a;--txt2:#4B4568;--txt3:#9490a8;--bg2:#F8F5FF}
+:root{--v:#8B2FC9;--vd:#5B1A8A;--vl:#C084FC;--glow:rgba(139,47,201,0.25);--txt:#0f0a1a;--txt2:#5a5270;--txt3:#9490a8}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:#fff;color:var(--txt);overflow-x:hidden}
 #particles{position:fixed;inset:0;z-index:0;pointer-events:none}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 52px;background:rgba(255,255,255,0.96);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid rgba(124,58,237,0.1);transition:box-shadow .3s}
-nav.scrolled{box-shadow:0 4px 28px rgba(124,58,237,.08)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:12px 48px;background:rgba(255,255,255,0.94);backdrop-filter:blur(20px);border-bottom:1px solid rgba(139,47,201,0.1)}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-icon{width:42px;height:42px;display:flex;align-items:center;justify-content:center}
-.logo-icon svg{width:42px;height:42px}
-.logo-text{font-size:18px;font-weight:800;letter-spacing:-.5px;color:#222222}
-.nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+.logo-icon{width:38px;height:38px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:38px;height:38px}
+.logo-text{font-size:18px;font-weight:800;letter-spacing:-.5px;background:linear-gradient(135deg,var(--vd),var(--v));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.nav-links{display:flex;gap:24px;list-style:none;align-items:center}
 .nav-links a{font-size:13px;font-weight:500;color:var(--txt2);text-decoration:none;transition:color .2s}
 .nav-links a:hover{color:var(--v)}
 .nav-ig{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;text-decoration:none;color:var(--txt2);transition:color .2s}
 .nav-ig:hover{color:#ee2a7b}
-.nav-btn{padding:10px 22px;border-radius:50px;font-size:13px;font-weight:700;background:linear-gradient(135deg,var(--vd),var(--v));color:#fff;border:none;cursor:pointer;box-shadow:0 4px 18px var(--glow);transition:transform .2s,box-shadow .2s;text-decoration:none}
+.nav-btn{padding:10px 20px;border-radius:50px;font-size:13px;font-weight:700;background:linear-gradient(135deg,var(--vd),var(--v));color:#fff;border:none;cursor:pointer;box-shadow:0 4px 18px var(--glow);transition:transform .2s,box-shadow .2s;text-decoration:none}
 .nav-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px var(--glow)}
 
 /* HERO */
@@ -32,174 +30,176 @@ nav.scrolled{box-shadow:0 4px 28px rgba(124,58,237,.08)}
 .hero-left{padding:80px 60px 80px 52px;position:relative;z-index:10}
 .hero-right{height:100vh;position:relative;overflow:hidden}
 .hero-right img{width:100%;height:100%;object-fit:cover;transition:opacity 1.2s ease}
-.hero-right-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0.22) 0%,transparent 40%)}
-.hblob{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,0.07),transparent 65%);top:-80px;left:-80px;pointer-events:none;animation:bF 10s ease-in-out infinite}
+.hero-right-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0.2) 0%,transparent 35%)}
+.hblob{position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(139,47,201,0.06),transparent 65%);top:-80px;left:-80px;pointer-events:none;animation:bF 10s ease-in-out infinite}
 @keyframes bF{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
-.hero-tag{display:inline-flex;align-items:center;gap:10px;padding:8px 20px;border-radius:50px;border:1px solid rgba(124,58,237,0.25);background:rgba(124,58,237,0.06);font-size:12px;font-weight:600;color:var(--vd);letter-spacing:1px;text-transform:uppercase;margin-bottom:28px;animation:sU .8s ease both}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;padding:8px 20px;border-radius:50px;border:1px solid rgba(139,47,201,0.25);background:rgba(139,47,201,0.06);font-size:12px;font-weight:600;color:var(--vd);letter-spacing:1px;text-transform:uppercase;margin-bottom:28px;animation:sU .8s ease both}
 .pd{width:8px;height:8px;border-radius:50%;background:var(--v);animation:pA 1.5s ease-in-out infinite}
 @keyframes pA{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.6);opacity:.4}}
-.hero-h1{font-size:clamp(42px,5vw,72px);font-weight:900;line-height:1.05;letter-spacing:-2.5px;margin-bottom:22px;animation:sU .8s ease .1s both}
+.hero-h1{font-size:clamp(40px,5vw,70px);font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:20px;animation:sU .8s ease .1s both}
 .hd{color:var(--txt)}.hg{background:linear-gradient(135deg,var(--vd),var(--v),#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.hm{color:var(--txt3);font-weight:300}
-.hero-desc{font-size:16px;line-height:1.8;color:var(--txt2);max-width:460px;margin-bottom:38px;animation:sU .8s ease .2s both}
+.hero-desc{font-size:16px;line-height:1.75;color:var(--txt2);max-width:450px;margin-bottom:36px;animation:sU .8s ease .2s both}
 .hbtns{display:flex;gap:14px;flex-wrap:wrap;animation:sU .8s ease .3s both}
 .bg{padding:15px 32px;border-radius:50px;font-size:14px;font-weight:700;background:linear-gradient(135deg,var(--vd),var(--v));color:#fff;border:none;cursor:pointer;box-shadow:0 6px 24px var(--glow);transition:transform .25s,box-shadow .25s;text-decoration:none;display:inline-block}
-.bg:hover{transform:translateY(-3px);box-shadow:0 14px 38px rgba(124,58,237,.42)}
-.bo{padding:15px 32px;border-radius:50px;font-size:14px;font-weight:700;background:transparent;color:var(--vd);border:2px solid rgba(124,58,237,.28);cursor:pointer;transition:all .25s;text-decoration:none;display:inline-block}
-.bo:hover{border-color:var(--v);background:rgba(124,58,237,.05)}
-.hstats{display:flex;gap:36px;margin-top:48px;border-top:1px solid rgba(124,58,237,.12);padding-top:32px;animation:sU .8s ease .4s both}
+.bg:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(139,47,201,.4)}
+.bo{padding:15px 32px;border-radius:50px;font-size:14px;font-weight:700;background:transparent;color:var(--vd);border:2px solid rgba(139,47,201,.3);cursor:pointer;transition:all .25s;text-decoration:none;display:inline-block}
+.bo:hover{border-color:var(--v);background:rgba(139,47,201,.05)}
+.hstats{display:flex;gap:36px;margin-top:48px;border-top:1px solid rgba(139,47,201,.12);padding-top:32px;animation:sU .8s ease .4s both}
 .sn{font-size:36px;font-weight:900;background:linear-gradient(135deg,var(--vd),var(--v));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .sl{font-size:12px;color:var(--txt3);margin-top:3px;font-weight:500}
-.hbf{position:absolute;background:rgba(255,255,255,0.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(124,58,237,.18);border-radius:14px;padding:12px 16px;box-shadow:0 10px 28px rgba(0,0,0,.09);animation:fB 5s ease-in-out infinite;z-index:10}
+.hbf{position:absolute;background:rgba(255,255,255,0.93);backdrop-filter:blur(12px);border:1px solid rgba(139,47,201,.2);border-radius:14px;padding:11px 15px;box-shadow:0 8px 24px rgba(0,0,0,.08);animation:fB 5s ease-in-out infinite;z-index:10}
 @keyframes fB{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-.hbf-l{font-size:10px;font-weight:600;color:var(--v);letter-spacing:1px;text-transform:uppercase;margin-bottom:3px}
+.hbf-l{font-size:10px;font-weight:600;color:var(--v);letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
 .hbf-v{font-size:13px;font-weight:700;color:var(--txt)}
 .hero-dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
-.hdot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.45);cursor:pointer;transition:all .3s;border:1.5px solid rgba(255,255,255,.6)}
+.hdot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer;transition:all .3s;border:1.5px solid rgba(255,255,255,.6)}
 .hdot.active{background:#fff;transform:scale(1.3)}
-@keyframes sU{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+@keyframes sU{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 
 .sec{padding:100px 52px;position:relative;z-index:10}
 .eyebrow{font-size:11px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--v);text-align:center;margin-bottom:12px}
 .sec-h{font-size:clamp(28px,3.5vw,46px);font-weight:800;text-align:center;color:var(--txt);letter-spacing:-1.2px;line-height:1.12;margin-bottom:14px}
 .sec-sub{text-align:center;font-size:15px;color:var(--txt2);max-width:440px;margin:0 auto 56px;line-height:1.75}
-.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,.12),transparent);max-width:800px;margin:0 auto}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(139,47,201,.15),transparent);max-width:700px;margin:0 auto}
 
 /* NOSOTROS */
-#nosotros{background:var(--bg2)}
-.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:960px;margin:0 auto}
-.vc{padding:38px 28px;border-radius:28px;background:#fff;border:1px solid rgba(124,58,237,.1);box-shadow:0 2px 18px rgba(124,58,237,.04);position:relative;overflow:hidden;transition:transform .4s cubic-bezier(.23,1,.32,1),box-shadow .4s,border-color .4s;cursor:default;transform-style:preserve-3d}
-.vc::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(124,58,237,.06),transparent 60%);opacity:0;transition:opacity .4s}
-.vc:hover{transform:translateY(-10px) rotateX(4deg) rotateY(-2deg);box-shadow:0 26px 56px rgba(124,58,237,.14);border-color:rgba(124,58,237,.26)}
+#nosotros{background:#f9f7fd}
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:960px;margin:0 auto}
+.vc{padding:36px 26px;border-radius:26px;background:#fff;border:1px solid rgba(139,47,201,.1);box-shadow:0 2px 16px rgba(139,47,201,.04);position:relative;overflow:hidden;transition:transform .4s cubic-bezier(.23,1,.32,1),box-shadow .4s,border-color .4s;cursor:default;transform-style:preserve-3d}
+.vc::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(139,47,201,.05),transparent 60%);opacity:0;transition:opacity .4s}
+.vc:hover{transform:translateY(-10px) rotateX(4deg) rotateY(-2deg);box-shadow:0 24px 52px rgba(139,47,201,.14);border-color:rgba(139,47,201,.28)}
 .vc:hover::before{opacity:1}
-.vc-n{font-size:11px;font-weight:700;letter-spacing:3px;color:rgba(124,58,237,.3);margin-bottom:16px}
-.vc-i{width:54px;height:54px;border-radius:16px;background:linear-gradient(135deg,rgba(124,58,237,.1),rgba(124,58,237,.03));border:1px solid rgba(124,58,237,.15);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px}
+.vc-n{font-size:11px;font-weight:700;letter-spacing:3px;color:rgba(139,47,201,.28);margin-bottom:16px}
+.vc-i{width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,rgba(139,47,201,.1),rgba(139,47,201,.03));border:1px solid rgba(139,47,201,.15);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px}
 .vc-t{font-size:18px;font-weight:700;color:var(--txt);margin-bottom:8px}
 .vc-d{font-size:13.5px;color:var(--txt2);line-height:1.75}
-.vc-ln{position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--vd),var(--vl));transform:scaleX(0);transition:transform .4s;transform-origin:left}
+.vc-ln{position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--vd),var(--vl));transform:scaleX(0);transition:transform .4s;transform-origin:left}
 .vc:hover .vc-ln{transform:scaleX(1)}
 
 /* GALERÍA */
 #galeria{background:#fff}
-.gal-main{position:relative;height:520px;border-radius:28px;overflow:hidden;max-width:1100px;margin:0 auto 16px;cursor:pointer;box-shadow:0 8px 48px rgba(124,58,237,.1)}
+.gal-main{position:relative;height:500px;border-radius:26px;overflow:hidden;max-width:1100px;margin:0 auto 16px;cursor:pointer}
 .gal-main img{width:100%;height:100%;object-fit:cover;transition:transform 6s ease}
 .gal-main:hover img{transform:scale(1.04)}
-.gal-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,0,25,.6) 0%,transparent 55%)}
+.gal-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,0,25,.55) 0%,transparent 50%)}
 .gal-cap{position:absolute;bottom:28px;left:32px;color:#fff}
 .gal-cap h3{font-size:22px;font-weight:800;margin-bottom:4px}
 .gal-cap p{font-size:13px;opacity:.7}
-.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:200px 200px;gap:14px;max-width:1100px;margin:0 auto}
-.gi{border-radius:18px;overflow:hidden;cursor:pointer;position:relative;box-shadow:0 2px 14px rgba(0,0,0,.07)}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:200px 200px;gap:12px;max-width:1100px;margin:0 auto}
+.gi{border-radius:16px;overflow:hidden;cursor:pointer;position:relative}
 .gi img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .gi:hover img{transform:scale(1.08)}
 .gi.tall{grid-row:span 2}.gi.wide{grid-column:span 2}
 .gi-ov{position:absolute;inset:0;background:rgba(90,30,150,0);transition:background .3s}
-.gi:hover .gi-ov{background:rgba(90,30,150,.12)}
+.gi:hover .gi-ov{background:rgba(90,30,150,.1)}
 
 /* IG BANNER */
-.ig-banner{max-width:1100px;margin:24px auto 0;border-radius:22px;background:linear-gradient(135deg,#f9ce34 0%,#ee2a7b 40%,#6228d7 100%);padding:2px}
-.ig-banner-inner{background:#fff;border-radius:20px;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.ig-banner{max-width:1100px;margin:24px auto 0;border-radius:20px;background:linear-gradient(135deg,#f9ce34 0%,#ee2a7b 40%,#6228d7 100%);padding:2px}
+.ig-banner-inner{background:#fff;border-radius:18px;padding:20px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .ig-banner-left{display:flex;align-items:center;gap:14px}
-.ig-banner-icon{width:46px;height:46px;border-radius:13px;flex-shrink:0;background:linear-gradient(135deg,#f9ce34,#ee2a7b,#6228d7);display:flex;align-items:center;justify-content:center}
+.ig-banner-icon{width:44px;height:44px;border-radius:12px;flex-shrink:0;background:linear-gradient(135deg,#f9ce34,#ee2a7b,#6228d7);display:flex;align-items:center;justify-content:center}
 .ig-banner-text strong{font-size:14px;font-weight:800;color:var(--txt);display:block}
 .ig-banner-text span{font-size:13px;color:var(--txt2)}
-.ig-banner-btn{padding:10px 22px;border-radius:50px;font-size:13px;font-weight:700;background:linear-gradient(135deg,#ee2a7b,#6228d7);color:#fff;text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 16px rgba(238,42,123,.28)}
-.ig-banner-btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(238,42,123,.42)}
+.ig-banner-btn{padding:10px 20px;border-radius:50px;font-size:13px;font-weight:700;background:linear-gradient(135deg,#ee2a7b,#6228d7);color:#fff;text-decoration:none;white-space:nowrap;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 16px rgba(238,42,123,.28)}
+.ig-banner-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(238,42,123,.4)}
 
 /* CATÁLOGO */
-#catalogo{background:var(--bg2)}
-.cat-tabs-wrap{max-width:1160px;margin:0 auto 36px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-.cat-tab{padding:9px 20px;border-radius:50px;font-size:13px;font-weight:600;border:1.5px solid rgba(124,58,237,.18);color:var(--txt2);cursor:pointer;transition:all .2s;background:#fff;user-select:none}
+#catalogo{background:#f5f0fe}
+.cat-tabs-wrap{max-width:1160px;margin:0 auto 32px;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.cat-tab{padding:9px 20px;border-radius:50px;font-size:13px;font-weight:600;border:1.5px solid rgba(139,47,201,.18);color:var(--txt2);cursor:pointer;transition:all .2s;background:#fff;user-select:none}
 .cat-tab:hover{border-color:var(--v);color:var(--v)}
 .cat-tab.active{background:linear-gradient(135deg,var(--vd),var(--v));color:#fff;border-color:transparent;box-shadow:0 4px 14px var(--glow)}
 
+/* panel visible/hidden */
 .cat-panel{display:none;max-width:1160px;margin:0 auto;animation:panelIn .35s ease}
 .cat-panel.active{display:block}
-@keyframes panelIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes panelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
-.panel-hero{position:relative;height:380px;border-radius:26px;overflow:hidden;margin-bottom:20px;background:#ede0ff;box-shadow:0 6px 36px rgba(124,58,237,.1)}
+/* hero de cada panel */
+.panel-hero{position:relative;height:360px;border-radius:22px;overflow:hidden;margin-bottom:18px;background:#f0e8ff}
 .panel-hero-emoji{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:120px;background:linear-gradient(135deg,#f5f0fe,#ede0ff)}
 .panel-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.panel-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,0,25,.65),transparent 60%)}
-.panel-hero-text{position:absolute;bottom:28px;left:30px;color:#fff}
-.panel-hero-text h3{font-size:24px;font-weight:800;margin-bottom:6px}
-.panel-hero-text p{font-size:13px;opacity:.78;max-width:500px;line-height:1.65}
+.panel-hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,0,25,.6),transparent 55%)}
+.panel-hero-text{position:absolute;bottom:24px;left:26px;color:#fff}
+.panel-hero-text h3{font-size:22px;font-weight:800;margin-bottom:6px}
+.panel-hero-text p{font-size:13px;opacity:.75;max-width:500px;line-height:1.6}
 
-.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.pc{border-radius:20px;overflow:hidden;background:#fff;border:1px solid rgba(124,58,237,.1);box-shadow:0 2px 14px rgba(124,58,237,.05);transition:transform .35s cubic-bezier(.23,1,.32,1),box-shadow .35s;cursor:default;transform-style:preserve-3d}
-.pc:hover{transform:translateY(-10px) rotateX(4deg) scale(1.02);box-shadow:0 24px 52px rgba(124,58,237,.16)}
-.pc-img{height:160px;overflow:hidden;position:relative;background:linear-gradient(135deg,#f5f0fe,#ede0ff);display:flex;align-items:center;justify-content:center;font-size:46px}
+/* grid de productos */
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.pc{border-radius:18px;overflow:hidden;background:#fff;border:1px solid rgba(139,47,201,.1);box-shadow:0 2px 12px rgba(139,47,201,.05);transition:transform .35s cubic-bezier(.23,1,.32,1),box-shadow .35s;cursor:default;transform-style:preserve-3d}
+.pc:hover{transform:translateY(-10px) rotateX(4deg) scale(1.02);box-shadow:0 22px 48px rgba(139,47,201,.16)}
+.pc-img{height:150px;overflow:hidden;position:relative;background:linear-gradient(135deg,#f5f0fe,#ede0ff);display:flex;align-items:center;justify-content:center;font-size:50px}
 .pc-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.pc-body{padding:15px 17px 20px}
-.pc-name{font-size:13px;font-weight:700;color:var(--txt);margin-bottom:5px}
+.pc-body{padding:14px 16px 18px}
+.pc-name{font-size:13px;font-weight:700;color:var(--txt);margin-bottom:4px}
 .pc-desc{font-size:11.5px;color:var(--txt3);line-height:1.55}
 
 /* PROCESO */
 #proceso{background:#fff}
-.steps{display:flex;max-width:880px;margin:0 auto;position:relative}
-.steps::before{content:'';position:absolute;top:27px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,.2),rgba(124,58,237,.2),transparent)}
-.step{flex:1;text-align:center;padding:0 18px}
-.sc{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--vd),var(--v));box-shadow:0 6px 22px rgba(124,58,237,.3);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;margin:0 auto 18px;transition:transform .3s,box-shadow .3s}
-.step:hover .sc{transform:scale(1.12);box-shadow:0 12px 34px rgba(124,58,237,.52)}
+.steps{display:flex;max-width:860px;margin:0 auto;position:relative}
+.steps::before{content:'';position:absolute;top:27px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(139,47,201,.2),rgba(139,47,201,.2),transparent)}
+.step{flex:1;text-align:center;padding:0 16px}
+.sc{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--vd),var(--v));box-shadow:0 6px 20px rgba(139,47,201,.3);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;margin:0 auto 18px;transition:transform .3s,box-shadow .3s}
+.step:hover .sc{transform:scale(1.12);box-shadow:0 10px 32px rgba(139,47,201,.5)}
 .st{font-size:15px;font-weight:700;color:var(--txt);margin-bottom:8px}
-.sd{font-size:13px;color:var(--txt2);line-height:1.65}
+.sd{font-size:13px;color:var(--txt2);line-height:1.6}
 
 /* CONTACTO */
-#contacto{background:var(--bg2)}
-.cw{display:grid;grid-template-columns:1fr 1fr;gap:56px;max-width:860px;margin:0 auto}
+#contacto{background:#f9f7fd}
+.cw{display:grid;grid-template-columns:1fr 1fr;gap:52px;max-width:840px;margin:0 auto}
 .cl h3{font-size:24px;font-weight:800;color:var(--txt);margin-bottom:10px}
-.cl p{font-size:14px;color:var(--txt2);line-height:1.75;margin-bottom:32px}
+.cl p{font-size:14px;color:var(--txt2);line-height:1.7;margin-bottom:32px}
 .ci2{display:flex;align-items:center;gap:14px;margin-bottom:18px}
-.cico{width:44px;height:44px;flex-shrink:0;border-radius:14px;background:rgba(124,58,237,.07);border:1px solid rgba(124,58,237,.15);display:flex;align-items:center;justify-content:center;font-size:17px}
+.cico{width:42px;height:42px;flex-shrink:0;border-radius:13px;background:rgba(139,47,201,.07);border:1px solid rgba(139,47,201,.15);display:flex;align-items:center;justify-content:center;font-size:17px}
 .cil{font-size:11px;color:var(--txt3);margin-bottom:2px;font-weight:600;letter-spacing:.5px}
 .civ{font-size:14px;color:var(--txt);font-weight:600}
 .socs{display:flex;gap:10px;margin-top:26px}
-.soc{width:42px;height:42px;border-radius:13px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;text-decoration:none}
+.soc{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s;text-decoration:none}
 .soc-ig{background:rgba(238,42,123,.06);border:1px solid rgba(238,42,123,.18)}
-.soc-ig:hover{background:rgba(238,42,123,.12);border-color:rgba(238,42,123,.38);transform:translateY(-3px)}
+.soc-ig:hover{background:rgba(238,42,123,.12);border-color:rgba(238,42,123,.35);transform:translateY(-3px)}
 .soc-fb{background:rgba(24,119,242,.06);border:1px solid rgba(24,119,242,.18)}
-.soc-fb:hover{background:rgba(24,119,242,.12);border-color:rgba(24,119,242,.38);transform:translateY(-3px)}
-.cform{background:#fff;border:1px solid rgba(124,58,237,.1);border-radius:28px;padding:36px;box-shadow:0 8px 36px rgba(124,58,237,.07)}
-.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.fg{margin-bottom:14px}
+.soc-fb:hover{background:rgba(24,119,242,.12);border-color:rgba(24,119,242,.35);transform:translateY(-3px)}
+.cform{background:#fff;border:1px solid rgba(139,47,201,.1);border-radius:26px;padding:34px;box-shadow:0 6px 32px rgba(139,47,201,.06)}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.fg{margin-bottom:13px}
 .fl{font-size:11px;font-weight:700;color:var(--txt3);letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:7px}
-.fi{width:100%;padding:12px 15px;border-radius:13px;background:#F8F5FF;border:1px solid rgba(124,58,237,.12);color:var(--txt);font-size:14px;font-family:inherit;outline:none;transition:border-color .2s,box-shadow .2s}
-.fi:focus{border-color:var(--v);box-shadow:0 0 0 3px rgba(124,58,237,.08);background:#fff}
+.fi{width:100%;padding:12px 14px;border-radius:12px;background:#f8f5fe;border:1px solid rgba(139,47,201,.12);color:var(--txt);font-size:14px;font-family:inherit;outline:none;transition:border-color .2s,box-shadow .2s}
+.fi:focus{border-color:var(--v);box-shadow:0 0 0 3px rgba(139,47,201,.07);background:#fff}
 .fi::placeholder{color:var(--txt3)}
-textarea.fi{resize:none;height:88px}
-.fbtn{width:100%;padding:14px;border-radius:14px;background:linear-gradient(135deg,var(--vd),var(--v));color:#fff;font-size:14px;font-weight:800;border:none;cursor:pointer;font-family:inherit;box-shadow:0 6px 22px var(--glow);transition:transform .25s,box-shadow .25s}
-.fbtn:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(124,58,237,.4)}
+textarea.fi{resize:none;height:85px}
+.fbtn{width:100%;padding:14px;border-radius:13px;background:linear-gradient(135deg,var(--vd),var(--v));color:#fff;font-size:14px;font-weight:800;border:none;cursor:pointer;font-family:inherit;box-shadow:0 6px 20px var(--glow);transition:transform .25s,box-shadow .25s}
+.fbtn:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(139,47,201,.38)}
 
 /* FOOTER */
-footer{background:var(--txt);padding:30px 52px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:10}
-.flo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.flo-icon{width:34px;height:34px;display:flex;align-items:center;justify-content:center}
-.flo-icon svg{width:34px;height:34px}
-.flo-text{font-size:16px;font-weight:800;color:rgba(255,255,255,.88)}
-.fco{font-size:12px;color:rgba(255,255,255,.36)}
-.f-ig{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:rgba(255,255,255,.42);text-decoration:none;transition:color .2s}
+footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:10}
+.flo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.flo-icon svg{width:30px;height:30px;filter:brightness(0) invert(1) opacity(.9)}
+.flo-text{font-size:16px;font-weight:800;color:rgba(255,255,255,.85)}
+.fco{font-size:12px;color:rgba(255,255,255,.38)}
+.f-ig{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s}
 .f-ig:hover{color:#ee2a7b}
 
 /* WA FLOTANTE */
-.wa{position:fixed;bottom:28px;right:28px;z-index:300;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 26px rgba(37,211,102,.44);cursor:pointer;transition:transform .25s,box-shadow .25s;text-decoration:none;animation:wP .6s ease 1s both}
-.wa:hover{transform:translateY(-4px) scale(1.08);box-shadow:0 12px 34px rgba(37,211,102,.58)}
+.wa{position:fixed;bottom:28px;right:28px;z-index:300;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(37,211,102,.42);cursor:pointer;transition:transform .25s,box-shadow .25s;text-decoration:none;animation:wP .6s ease 1s both}
+.wa:hover{transform:translateY(-4px) scale(1.08);box-shadow:0 10px 32px rgba(37,211,102,.55)}
 @keyframes wP{from{opacity:0;transform:scale(0)}to{opacity:1;transform:scale(1)}}
 
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.23,1,.32,1),transform .8s cubic-bezier(.23,1,.32,1)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.23,1,.32,1),transform .8s cubic-bezier(.23,1,.32,1)}
 .reveal.up{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:#f5f0ff}::-webkit-scrollbar-thumb{background:var(--v);border-radius:2px}
 
 @media(max-width:900px){
   nav{padding:10px 18px}.nav-links{display:none}
-  #hero{grid-template-columns:1fr}.hero-right{height:60vw}.hero-left{padding:90px 20px 40px}
+  #hero{grid-template-columns:1fr}.hero-right{height:55vw}.hero-left{padding:90px 20px 36px}
   .vals{grid-template-columns:1fr}
   .gal-grid{grid-template-columns:repeat(2,1fr);grid-template-rows:auto}
   .gi.tall,.gi.wide{grid-row:span 1;grid-column:span 1}
   .prod-grid{grid-template-columns:repeat(2,1fr)}
-  .steps{flex-direction:column;gap:26px}.steps::before{display:none}
+  .steps{flex-direction:column;gap:24px}.steps::before{display:none}
   .cw{grid-template-columns:1fr}.frow{grid-template-columns:1fr}
-  .sec{padding:64px 20px}
-  footer{flex-direction:column;gap:14px;text-align:center}
+  .sec{padding:60px 20px}
+  footer{flex-direction:column;gap:12px;text-align:center}
   .ig-banner-inner{flex-direction:column;text-align:center}
 }
 </style>
@@ -208,17 +208,13 @@ footer{background:var(--txt);padding:30px 52px;display:flex;align-items:center;j
 <canvas id="particles"></canvas>
 
 <!-- NAV -->
-<nav id="navbar">
+<nav>
   <a href="#hero" class="nav-logo">
     <div class="logo-icon">
-      <!-- Logo L + semicírculo negro (marca real Living Rental) -->
-      <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Barra vertical de la L -->
-        <rect x="4" y="4" width="15" height="36" rx="2" fill="#8E2FA0"/>
-        <!-- Barra horizontal de la L -->
-        <rect x="4" y="37" width="44" height="11" rx="2" fill="#8E2FA0"/>
-        <!-- Semicírculo negro (D) a la derecha de la barra vertical -->
-        <path d="M19 4 A15 16 0 0 1 19 36 Z" fill="#1C1C1C"/>
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="6" y="6" width="14" height="36" rx="2" fill="#8B2FC9"/>
+        <rect x="6" y="36" width="36" height="6" rx="2" fill="#8B2FC9"/>
+        <path d="M20 6 h14 a8 8 0 0 1 8 8 v0 a8 8 0 0 1 -8 8 h-14 z" fill="#1a1a1a"/>
       </svg>
     </div>
     <span class="logo-text">Living Rental</span>
@@ -255,9 +251,9 @@ footer{background:var(--txt);padding:30px 52px;display:flex;align-items:center;j
     </div>
   </div>
   <div class="hero-right">
-    <img id="heroImg" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=900&q=80&fit=crop" alt="Living Rental evento">
+    <img id="heroImg" src="https://via.placeholder.com/600x800/8B2FC9/ffffff?text=Living+Rental" alt="Living Rental evento">
     <div class="hero-right-overlay"></div>
-    <div class="hbf" style="bottom:18%;left:5%"><div class="hbf-l">Colección</div><div class="hbf-v">Caña &amp; Ratán</div></div>
+    <div class="hbf" style="bottom:16%;left:5%"><div class="hbf-l">Colección</div><div class="hbf-v">Caña & Ratán</div></div>
     <div class="hbf" style="top:18%;right:5%;animation-delay:-2.5s"><div class="hbf-l">Temporada</div><div class="hbf-v">2026 ✦</div></div>
     <div class="hero-dots" id="heroDots"></div>
   </div>
@@ -282,36 +278,18 @@ footer{background:var(--txt);padding:30px 52px;display:flex;align-items:center;j
   <div class="reveal"><p class="eyebrow">Nuestros eventos</p><h2 class="sec-h">Cada espacio, una historia</h2><p class="sec-sub">Desde bodas íntimas en campos hasta eventos corporativos. Siempre con el mismo nivel de excelencia.</p></div>
 
   <div class="gal-main reveal">
-    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&q=80&fit=crop" alt="Evento Living Rental">
+    <img id="galHero" src="https://via.placeholder.com/1100x500/8B2FC9/ffffff?text=Galeria+Principal" alt="Evento Living Rental">
     <div class="gal-overlay"></div>
     <div class="gal-cap"><h3>Living pana beige — Evento tropical exterior</h3><p>Buenos Aires · 2025</p></div>
   </div>
 
   <div class="gal-grid reveal">
-    <div class="gi tall">
-      <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=400&q=80&fit=crop" alt="Living pana beige exterior tropical">
-      <div class="gi-ov"></div>
-    </div>
-    <div class="gi">
-      <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&q=80&fit=crop" alt="Sillas Viena ratán parque">
-      <div class="gi-ov"></div>
-    </div>
-    <div class="gi">
-      <img src="https://images.unsplash.com/photo-1550226891-ef816aed4a98?w=400&q=80&fit=crop" alt="Living hierro negro pana negro">
-      <div class="gi-ov"></div>
-    </div>
-    <div class="gi wide">
-      <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=700&q=80&fit=crop" alt="Mesas altas banquetas pana negra hipódromo">
-      <div class="gi-ov"></div>
-    </div>
-    <div class="gi">
-      <img src="https://images.unsplash.com/photo-1571624436279-b272aff752b5?w=400&q=80&fit=crop" alt="Mesa alta dorada banquetas ratán campo">
-      <div class="gi-ov"></div>
-    </div>
-    <div class="gi">
-      <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=400&q=80&fit=crop" alt="Living lino gris pana azul interior">
-      <div class="gi-ov"></div>
-    </div>
+    <div class="gi tall"><img id="g0" src="https://via.placeholder.com/300x400/8B2FC9/ffffff?text=Img1" alt="Living caña campo"><div class="gi-ov"></div></div>
+    <div class="gi"><img id="g1" src="https://via.placeholder.com/300x200/7B1FB9/ffffff?text=Img2" alt="Sillas Venecia jardín"><div class="gi-ov"></div></div>
+    <div class="gi"><img id="g2" src="https://via.placeholder.com/300x200/6B0FA9/ffffff?text=Img3" alt="Interior hipódromo pana azul"><div class="gi-ov"></div></div>
+    <div class="gi wide"><img id="g3" src="https://via.placeholder.com/600x200/5B0A99/ffffff?text=Img4" alt="Living lino gris interior"><div class="gi-ov"></div></div>
+    <div class="gi"><img id="g4" src="https://via.placeholder.com/300x200/4B0089/ffffff?text=Img5" alt="Living pana negro con flores"><div class="gi-ov"></div></div>
+    <div class="gi"><img id="g5" src="https://via.placeholder.com/300x200/C084FC/ffffff?text=Img6" alt="Living madera exterior"><div class="gi-ov"></div></div>
   </div>
 
   <div class="ig-banner reveal">
@@ -332,112 +310,46 @@ footer{background:var(--txt);padding:30px 52px;display:flex;align-items:center;j
   <div class="reveal"><p class="eyebrow">Catálogo 2026</p><h2 class="sec-h">Nuestras colecciones</h2><p class="sec-sub">Seleccioná una categoría para explorar los productos.</p></div>
 
   <div class="cat-tabs-wrap reveal" id="catTabs">
-    <div class="cat-tab active" data-cat="sillones">🛋️ Sillones</div>
-    <div class="cat-tab" data-cat="mesasaltas">🍸 Mesas Altas y Banquetas</div>
-    <div class="cat-tab" data-cat="mesasratonas">☕ Mesas Ratonas</div>
-    <div class="cat-tab" data-cat="camastros">🌅 Camastros</div>
-    <div class="cat-tab" data-cat="puffs">◼ Puffs</div>
-    <div class="cat-tab" data-cat="sillas">🪑 Sillas</div>
+    <div class="cat-tab active" data-cat="lino">🌾 Living de Lino</div>
+    <div class="cat-tab" data-cat="pana">🤎 Living de Pana</div>
     <div class="cat-tab" data-cat="gabardina">🤍 Living de Gabardina</div>
-    <div class="cat-tab" data-cat="hierro">⚙️ Living de Hierro</div>
-    <div class="cat-tab" data-cat="cana">🌿 Living de Caña</div>
+    <div class="cat-tab" data-cat="gervasoni">✨ Living de Gervasoni</div>
     <div class="cat-tab" data-cat="madera">🪵 Living de Madera</div>
+    <div class="cat-tab" data-cat="cana">🌿 Living de Caña y Ratan</div>
+    <div class="cat-tab" data-cat="hierro">⚙️ Living de Hierro</div>
+    <div class="cat-tab" data-cat="mesasaltas">🍸 Mesas Altas con Banquetas</div>
+    <div class="cat-tab" data-cat="mesasbar">🍺 Mesas Bar con Sillas</div>
+    <div class="cat-tab" data-cat="mesasratonas">☕ Mesas Ratonas</div>
+    <div class="cat-tab" data-cat="sillas">🪑 Sillas</div>
     <div class="cat-tab" data-cat="otros">✦ Otros</div>
+    <div class="cat-tab" data-cat="sillones">🛋️ Sillones</div>
+    <div class="cat-tab" data-cat="eventos">📸 Eventos</div>
   </div>
 
-  <!-- SILLONES -->
-  <div class="cat-panel active" id="cat-sillones">
+  <!-- LIVING DE LINO -->
+  <div class="cat-panel active" id="cat-lino">
     <div class="panel-hero">
-      <div class="panel-hero-emoji">🛋️</div>
-      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&q=80&fit=crop" alt="Sillones">
+      <div class="panel-hero-emoji">🌾</div>
+      <img src="fotos/Fotos%20Living%20Rental/Livng%20de%20llino.jpeg" alt="Living de Lino" onerror="this.style.display='none'">
       <div class="panel-hero-overlay"></div>
-      <div class="panel-hero-text"><h3>Sillones</h3><p>Sillones individuales tapizados en pana, lino y gabardina en una amplia paleta de colores.</p></div>
+      <div class="panel-hero-text"><h3>Living de Lino</h3><p>Tapizado lino natural, elegante y atemporal para eventos de interior de alto nivel.</p></div>
     </div>
     <div class="prod-grid">
-      <div class="pc"><div class="pc-img">🛋️<img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=320&q=80&fit=crop" alt="Sillón pana beige"></div><div class="pc-body"><div class="pc-name">Sillón pana beige</div><div class="pc-desc">Tapizado pana beige, patas doradas</div></div></div>
-      <div class="pc"><div class="pc-img">🛋️<img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=320&q=80&fit=crop" alt="Sillón pana gris"></div><div class="pc-body"><div class="pc-name">Sillón pana gris</div><div class="pc-desc">Tapizado pana gris, patas doradas</div></div></div>
-      <div class="pc"><div class="pc-img">🛋️<img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=320&q=80&fit=crop" alt="Sillón pana negro"></div><div class="pc-body"><div class="pc-name">Sillón pana negro</div><div class="pc-desc">Tapizado pana negro, patas negras</div></div></div>
-      <div class="pc"><div class="pc-img">🛋️<img src="https://images.unsplash.com/photo-1584467735815-f778f274e296?w=320&q=80&fit=crop" alt="Sillón gabardina blanca"></div><div class="pc-body"><div class="pc-name">Sillón gabardina blanca</div><div class="pc-desc">Gabardina blanca clásica, estructura madera</div></div></div>
-    </div>
-  </div>
-
-  <!-- MESAS ALTAS Y BANQUETAS -->
-  <div class="cat-panel" id="cat-mesasaltas">
-    <div class="panel-hero">
-      <div class="panel-hero-emoji">🍸</div>
-      <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=1200&q=80&fit=crop" alt="Mesas Altas y Banquetas">
-      <div class="panel-hero-overlay"></div>
-      <div class="panel-hero-text"><h3>Mesas Altas y Banquetas</h3><p>Mesas altas de hierro y madera con banquetas tapizadas. Ideales para cócteles y eventos corporativos.</p></div>
-    </div>
-    <div class="prod-grid">
-      <div class="pc"><div class="pc-img">🍸<img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=320&q=80&fit=crop" alt="Mesa alta negra + banquetas pana negra"></div><div class="pc-body"><div class="pc-name">Mesa alta negra + banquetas pana</div><div class="pc-desc">Mesa redonda hierro negro con banquetas pana negra</div></div></div>
-      <div class="pc"><div class="pc-img">🍸<img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=320&q=80&fit=crop" alt="Mesa alta dorada + banquetas pana gris"></div><div class="pc-body"><div class="pc-name">Mesa alta dorada + banquetas pana gris</div><div class="pc-desc">Mesa mármol pata dorada con banquetas pana gris</div></div></div>
-      <div class="pc"><div class="pc-img">🍸<img src="https://images.unsplash.com/photo-1571624436279-b272aff752b5?w=320&q=80&fit=crop" alt="Mesa alta dorada + banquetas ratán"></div><div class="pc-body"><div class="pc-name">Mesa alta dorada + banquetas ratán</div><div class="pc-desc">Mesa mármol dorada con banquetas ratán natural</div></div></div>
-      <div class="pc"><div class="pc-img">🍸<img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=320&q=80&fit=crop" alt="Mesa alta madera + banquetas MDQ"></div><div class="pc-body"><div class="pc-name">Mesa alta madera + banquetas MDQ</div><div class="pc-desc">Mesa tablero madera, pata hierro con sillas MDQ</div></div></div>
+      <div class="pc"><div class="pc-img">🌾<img src="fotos/Fotos%20Living%20Rental/Livng%20de%20llino.jpeg" alt="Living de Lino" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living de Lino</div><div class="pc-desc">Sillones tapizados en lino natural</div></div></div>
     </div>
   </div>
 
-  <!-- MESAS RATONAS -->
-  <div class="cat-panel" id="cat-mesasratonas">
+  <!-- LIVING DE PANA -->
+  <div class="cat-panel" id="cat-pana">
     <div class="panel-hero">
-      <div class="panel-hero-emoji">☕</div>
-      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80&fit=crop" alt="Mesas Ratonas">
+      <div class="panel-hero-emoji">🤎</div>
+      <img src="fotos/Fotos%20Living%20Rental/living-pana-beige-266x266.jpg" alt="Living de Pana" onerror="this.style.display='none'">
       <div class="panel-hero-overlay"></div>
-      <div class="panel-hero-text"><h3>Mesas Ratonas</h3><p>Mesas de centro en mármol, madera y ratán para complementar cualquier living de evento.</p></div>
+      <div class="panel-hero-text"><h3>Living de Pana</h3><p>Terciopelo pana en múltiples colores: beige, azul, verde y más.</p></div>
     </div>
     <div class="prod-grid">
-      <div class="pc"><div class="pc-img">☕<img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=320&q=80&fit=crop" alt="Mesa ratona mármol dorada"></div><div class="pc-body"><div class="pc-name">Mesa ratona mármol dorada</div><div class="pc-desc">Tapa mármol blanco, pata dorada</div></div></div>
-      <div class="pc"><div class="pc-img">☕<img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=320&q=80&fit=crop" alt="Mesa ratona ratán natural"></div><div class="pc-body"><div class="pc-name">Mesa ratona ratán natural</div><div class="pc-desc">Mesa tejido ratán natural, baja</div></div></div>
-      <div class="pc"><div class="pc-img">☕<img src="https://images.unsplash.com/photo-1550226891-ef816aed4a98?w=320&q=80&fit=crop" alt="Mesa ratona negra"></div><div class="pc-body"><div class="pc-name">Mesa ratona negra</div><div class="pc-desc">Mesa redonda hierro negro, tapa negra</div></div></div>
-      <div class="pc"><div class="pc-img">☕<img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=320&q=80&fit=crop" alt="Duo mesas ratonas"></div><div class="pc-body"><div class="pc-name">Dúo mesas ratonas</div><div class="pc-desc">Dos mesas de distintos tamaños, combinables</div></div></div>
-    </div>
-  </div>
-
-  <!-- CAMASTROS -->
-  <div class="cat-panel" id="cat-camastros">
-    <div class="panel-hero">
-      <div class="panel-hero-emoji">🌅</div>
-      <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&q=80&fit=crop" alt="Camastros">
-      <div class="panel-hero-overlay"></div>
-      <div class="panel-hero-text"><h3>Camastros</h3><p>Camastros tapizados en gabardina y pana para ambientaciones de playa, campo y eventos al aire libre.</p></div>
-    </div>
-    <div class="prod-grid">
-      <div class="pc"><div class="pc-img">🌅<img src="https://images.unsplash.com/photo-1501045661006-fcebe0257c3f?w=320&q=80&fit=crop" alt="Camastro gabardina blanca"></div><div class="pc-body"><div class="pc-name">Camastro gabardina blanca</div><div class="pc-desc">Con colchoneta gabardina blanca y almohadones</div></div></div>
-      <div class="pc"><div class="pc-img">🌅<img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=320&q=80&fit=crop" alt="Camastro madera exterior"></div><div class="pc-body"><div class="pc-name">Camastro madera exterior</div><div class="pc-desc">Estructura madera natural con colchoneta</div></div></div>
-      <div class="pc"><div class="pc-img">🌅<img src="https://images.unsplash.com/photo-1478146059778-26b9deccc4d5?w=320&q=80&fit=crop" alt="Camastro con dosel"></div><div class="pc-body"><div class="pc-name">Camastro con dosel</div><div class="pc-desc">Camastro con estructura y tul decorativo</div></div></div>
-      <div class="pc"><div class="pc-img">🌅<img src="https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=320&q=80&fit=crop" alt="Camastro individual"></div><div class="pc-body"><div class="pc-name">Camastro individual</div><div class="pc-desc">Camastro compacto para espacios reducidos</div></div></div>
-    </div>
-  </div>
-
-  <!-- PUFFS -->
-  <div class="cat-panel" id="cat-puffs">
-    <div class="panel-hero">
-      <div class="panel-hero-emoji">◼</div>
-      <img src="https://images.unsplash.com/photo-1561049501-e1f96bdd98fd?w=1200&q=80&fit=crop" alt="Puffs">
-      <div class="panel-hero-overlay"></div>
-      <div class="panel-hero-text"><h3>Puffs</h3><p>Puffs cuadrados y redondos en pana, lino y gabardina. Complemento ideal para cualquier living.</p></div>
-    </div>
-    <div class="prod-grid">
-      <div class="pc"><div class="pc-img">◼<img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=320&q=80&fit=crop" alt="Puff cuadrado beige"></div><div class="pc-body"><div class="pc-name">Puff cuadrado beige</div><div class="pc-desc">Tapizado pana beige, patas madera</div></div></div>
-      <div class="pc"><div class="pc-img">◼<img src="https://images.unsplash.com/photo-1617104678098-de229db51175?w=320&q=80&fit=crop" alt="Puff cuadrado gris"></div><div class="pc-body"><div class="pc-name">Puff cuadrado gris</div><div class="pc-desc">Tapizado pana gris, patas doradas</div></div></div>
-      <div class="pc"><div class="pc-img">◼<img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?w=320&q=80&fit=crop" alt="Puff redondo negro"></div><div class="pc-body"><div class="pc-name">Puff redondo negro</div><div class="pc-desc">Puff cilíndrico pana negro</div></div></div>
-      <div class="pc"><div class="pc-img">◼<img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=320&q=80&fit=crop" alt="Puff baúl gabardina"></div><div class="pc-body"><div class="pc-name">Puff baúl gabardina</div><div class="pc-desc">Puff rectangular tapizado, funciona como mesa</div></div></div>
-    </div>
-  </div>
-
-  <!-- SILLAS -->
-  <div class="cat-panel" id="cat-sillas">
-    <div class="panel-hero">
-      <div class="panel-hero-emoji">🪑</div>
-      <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&q=80&fit=crop" alt="Sillas">
-      <div class="panel-hero-overlay"></div>
-      <div class="panel-hero-text"><h3>Sillas</h3><p>Sillas Viena ratán, Tulum, MDQ, Cross y pana en múltiples colores para mesas y livings.</p></div>
-    </div>
-    <div class="prod-grid">
-      <div class="pc"><div class="pc-img">🪑<img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=320&q=80&fit=crop" alt="Silla Viena ratán"></div><div class="pc-body"><div class="pc-name">Silla Viena ratán</div><div class="pc-desc">Silla clásica con asiento y respaldo ratán natural</div></div></div>
-      <div class="pc"><div class="pc-img">🪑<img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=320&q=80&fit=crop" alt="Silla MDQ ratán"></div><div class="pc-body"><div class="pc-name">Silla MDQ ratán</div><div class="pc-desc">Silla ratán tejido, estructura madera natural</div></div></div>
-      <div class="pc"><div class="pc-img">🪑<img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?w=320&q=80&fit=crop" alt="Silla Cross negra"></div><div class="pc-body"><div class="pc-name">Silla Cross negra</div><div class="pc-desc">Silla estilo cross-back, hierro negro</div></div></div>
-      <div class="pc"><div class="pc-img">🪑<img src="https://images.unsplash.com/photo-1549187774-b4e9b0445b41?w=320&q=80&fit=crop" alt="Silla pana gris estructura dorada"></div><div class="pc-body"><div class="pc-name">Silla pana gris dorada</div><div class="pc-desc">Tapizado pana gris, patas doradas</div></div></div>
+      <div class="pc"><div class="pc-img">🤎<img src="fotos/Fotos%20Living%20Rental/living-pana-beige-266x266.jpg" alt="Living pana beige" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living pana beige</div><div class="pc-desc">Sillones pana beige con estructura dorada</div></div></div>
+      <div class="pc"><div class="pc-img">💙<img src="fotos/Fotos%20Living%20Rental/Sillon%20pana%20Azul%20con%20sillas%20pana%20verde.jpeg" alt="Sillón pana azul con sillas pana verde" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Sillón pana azul con sillas pana verde</div><div class="pc-desc">Combinación de colores pana azul y verde</div></div></div>
     </div>
   </div>
 
@@ -445,47 +357,27 @@ footer{background:var(--txt);padding:30px 52px;display:flex;align-items:center;j
   <div class="cat-panel" id="cat-gabardina">
     <div class="panel-hero">
       <div class="panel-hero-emoji">🤍</div>
-      <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1200&q=80&fit=crop" alt="Living de Gabardina">
+      <img src="fotos/Fotos%20Living%20Rental/Living%20Gabardina%20blanca.jpg" alt="Living Gabardina blanca" onerror="this.style.display='none'">
       <div class="panel-hero-overlay"></div>
-      <div class="panel-hero-text"><h3>Living de Gabardina</h3><p>Livings tapizados en gabardina blanca. El clásico atemporal para eventos de interior y exterior.</p></div>
+      <div class="panel-hero-text"><h3>Living de Gabardina</h3><p>Línea clásica en gabardina blanca. Sobria, elegante y atemporal.</p></div>
     </div>
     <div class="prod-grid">
-      <div class="pc"><div class="pc-img">🤍<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=320&q=80&fit=crop" alt="Living gabardina completo"></div><div class="pc-body"><div class="pc-name">Living gabardina completo</div><div class="pc-desc">Sofá 3 cps + 2 sillones + mesa ratona</div></div></div>
-      <div class="pc"><div class="pc-img">🤍<img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=320&q=80&fit=crop" alt="Living gabardina con puff"></div><div class="pc-body"><div class="pc-name">Living gabardina con puff</div><div class="pc-desc">Sillones gabardina + puff baúl blanco</div></div></div>
-      <div class="pc"><div class="pc-img">🤍<img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=320&q=80&fit=crop" alt="Living gabardina con sillas MDQ"></div><div class="pc-body"><div class="pc-name">Living gabardina + sillas MDQ</div><div class="pc-desc">Sofá gabardina combinado con sillas ratán MDQ</div></div></div>
-      <div class="pc"><div class="pc-img">🤍<img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=320&q=80&fit=crop" alt="Living gabardina exterior"></div><div class="pc-body"><div class="pc-name">Living gabardina exterior</div><div class="pc-desc">Ideal para jardines y terrazas descubiertas</div></div></div>
+      <div class="pc"><div class="pc-img">🤍<img src="fotos/Fotos%20Living%20Rental/Living%20Gabardina%20blanca.jpg" alt="Living Gabardina blanca" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living Gabardina blanca</div><div class="pc-desc">Sillones gabardina blanca para eventos elegantes</div></div></div>
     </div>
   </div>
 
-  <!-- LIVING DE HIERRO -->
-  <div class="cat-panel" id="cat-hierro">
+  <!-- LIVING DE GERVASONI -->
+  <div class="cat-panel" id="cat-gervasoni">
     <div class="panel-hero">
-      <div class="panel-hero-emoji">⚙️</div>
-      <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=1200&q=80&fit=crop" alt="Living de Hierro">
+      <div class="panel-hero-emoji">✨</div>
+      <img src="fotos/Fotos%20Living%20Rental/Living%20Gervasoni.jpg" alt="Living Gervasoni" onerror="this.style.display='none'">
       <div class="panel-hero-overlay"></div>
-      <div class="panel-hero-text"><h3>Living de Hierro</h3><p>Estructura metálica en negro o blanco. Estilo industrial y moderno para eventos corporativos y sociales.</p></div>
+      <div class="panel-hero-text"><h3>Living de Gervasoni</h3><p>El icónico sillón gervasoni: formas redondeadas, tapizado blanco y máxima elegancia.</p></div>
     </div>
     <div class="prod-grid">
-      <div class="pc"><div class="pc-img">⚙️<img src="https://images.unsplash.com/photo-1550226891-ef816aed4a98?w=320&q=80&fit=crop" alt="Living hierro negro pana negro"></div><div class="pc-body"><div class="pc-name">Living hierro negro + pana negro</div><div class="pc-desc">Sofá hierro negro con tapizado pana negro</div></div></div>
-      <div class="pc"><div class="pc-img">⚙️<img src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=320&q=80&fit=crop" alt="Living hierro negro pana beige"></div><div class="pc-body"><div class="pc-name">Living hierro negro + pana beige</div><div class="pc-desc">Estructura negra con cojines pana beige cuadrillé</div></div></div>
-      <div class="pc"><div class="pc-img">⚙️<img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=320&q=80&fit=crop" alt="Living hierro blanco gabardina"></div><div class="pc-body"><div class="pc-name">Living hierro blanco + gabardina</div><div class="pc-desc">Estructura hierro blanco con tapizado gabardina</div></div></div>
-      <div class="pc"><div class="pc-img">⚙️<img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=320&q=80&fit=crop" alt="Living hierro con puff"></div><div class="pc-body"><div class="pc-name">Living hierro + puff baúl</div><div class="pc-desc">Hierro negro con puff rectangular de centro</div></div></div>
-    </div>
-  </div>
-
-  <!-- LIVING DE CAÑA -->
-  <div class="cat-panel" id="cat-cana">
-    <div class="panel-hero">
-      <div class="panel-hero-emoji">🌿</div>
-      <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1200&q=80&fit=crop" alt="Living de Caña">
-      <div class="panel-hero-overlay"></div>
-      <div class="panel-hero-text"><h3>Living de Caña</h3><p>Estructura de caña y ratán natural. El estilo bohemio y tropical para eventos al aire libre.</p></div>
-    </div>
-    <div class="prod-grid">
-      <div class="pc"><div class="pc-img">🌿<img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=320&q=80&fit=crop" alt="Living caña ratán natural"></div><div class="pc-body"><div class="pc-name">Living caña ratán natural</div><div class="pc-desc">Sillones y sofá ratán con cojines blancos</div></div></div>
-      <div class="pc"><div class="pc-img">🌿<img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=320&q=80&fit=crop" alt="Living caña con gervasoni"></div><div class="pc-body"><div class="pc-name">Living caña + gervasoni</div><div class="pc-desc">Caña natural combinada con sillón gervasoni</div></div></div>
-      <div class="pc"><div class="pc-img">🌿<img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=320&q=80&fit=crop" alt="Living caña con sillas MDQ"></div><div class="pc-body"><div class="pc-name">Living caña + sillas MDQ</div><div class="pc-desc">Caña + sillas ratán MDQ para eventos de campo</div></div></div>
-      <div class="pc"><div class="pc-img">🌿<img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=320&q=80&fit=crop" alt="Living caña exterior tropical"></div><div class="pc-body"><div class="pc-name">Living caña exterior tropical</div><div class="pc-desc">Conjunto caña para ambientaciones tropicales</div></div></div>
+      <div class="pc"><div class="pc-img">✨<img src="fotos/Fotos%20Living%20Rental/Living%20Gervasoni.jpg" alt="Living Gervasoni" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living Gervasoni</div><div class="pc-desc">Living completo con sillones gervasoni</div></div></div>
+      <div class="pc"><div class="pc-img">☕<img src="fotos/Fotos%20Living%20Rental/Mesa%20ratona%20gervasoni.jpg" alt="Mesa ratona gervasoni" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa ratona gervasoni</div><div class="pc-desc">Mesa ratona estilo gervasoni</div></div></div>
+      <div class="pc"><div class="pc-img">🌿<img src="fotos/Fotos%20Living%20Rental/Livings%20de%20ca%C3%B1a%20con%20living%20de%20Gervasoni.jpg" alt="Livings de caña con living de Gervasoni" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Caña con Gervasoni</div><div class="pc-desc">Combinación de caña natural y gervasoni</div></div></div>
     </div>
   </div>
 
@@ -493,15 +385,104 @@ footer{background:var(--txt);padding:30px 52px;display:flex;align-items:center;j
   <div class="cat-panel" id="cat-madera">
     <div class="panel-hero">
       <div class="panel-hero-emoji">🪵</div>
-      <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&q=80&fit=crop" alt="Living de Madera">
+      <img src="fotos/Fotos%20Living%20Rental/Living%20Madera.jpg" alt="Living Madera" onerror="this.style.display='none'">
       <div class="panel-hero-overlay"></div>
-      <div class="panel-hero-text"><h3>Living de Madera</h3><p>Estructura de madera maciza con tapizado blanco. Elegante y versátil para interior y exterior.</p></div>
+      <div class="panel-hero-text"><h3>Living de Madera</h3><p>Muebles de madera maciza con tapizado blanco para eventos elegantes en exterior e interior.</p></div>
     </div>
     <div class="prod-grid">
-      <div class="pc"><div class="pc-img">🪵<img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=320&q=80&fit=crop&crop=right" alt="Living madera tapizado blanco"></div><div class="pc-body"><div class="pc-name">Living madera tapizado blanco</div><div class="pc-desc">Sofá + sillones madera con tapizado blanco</div></div></div>
-      <div class="pc"><div class="pc-img">🪵<img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=320&q=80&fit=crop&crop=right" alt="Living madera con sillas Bali"></div><div class="pc-body"><div class="pc-name">Living madera + sillas Bali</div><div class="pc-desc">Estructura madera + sillas ratán Bali</div></div></div>
-      <div class="pc"><div class="pc-img">🪵<img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=320&q=80&fit=crop" alt="Living madera + sillas Tulum"></div><div class="pc-body"><div class="pc-name">Living madera + sillas Tulum</div><div class="pc-desc">Madera natural con sillas Tulum bajo gazebo</div></div></div>
-      <div class="pc"><div class="pc-img">🪵<img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=320&q=80&fit=crop" alt="Living madera exterior campo"></div><div class="pc-body"><div class="pc-name">Living madera exterior campo</div><div class="pc-desc">Perfecto para estancias, campos y jardines</div></div></div>
+      <div class="pc"><div class="pc-img">🪵<img src="fotos/Fotos%20Living%20Rental/Living%20Madera.jpg" alt="Living Madera" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living Madera</div><div class="pc-desc">Sofás y sillones madera con tapizado blanco</div></div></div>
+      <div class="pc"><div class="pc-img">🪵<img src="fotos/Fotos%20Living%20Rental/Living%20Madera%20(2).jpg" alt="Living Madera 2" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living Madera II</div><div class="pc-desc">Variante de living madera para eventos</div></div></div>
+      <div class="pc"><div class="pc-img">🪵<img src="fotos/Fotos%20Living%20Rental/Living%20madera%20(3).jpg" alt="Living Madera 3" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living Madera III</div><div class="pc-desc">Tercera variante del living de madera</div></div></div>
+      <div class="pc"><div class="pc-img">🌿<img src="fotos/Fotos%20Living%20Rental/Living%20madera%20con%20ratan.jpg" alt="Living madera con ratán" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living madera con ratán</div><div class="pc-desc">Madera combinada con ratán natural</div></div></div>
+    </div>
+  </div>
+
+  <!-- LIVING DE CAÑA Y RATAN -->
+  <div class="cat-panel" id="cat-cana">
+    <div class="panel-hero">
+      <div class="panel-hero-emoji">🌿</div>
+      <img src="fotos/Fotos%20Living%20Rental/Living%20de%20ca%C3%B1a.jpg" alt="Living de caña" onerror="this.style.display='none'">
+      <div class="panel-hero-overlay"></div>
+      <div class="panel-hero-text"><h3>Living de Caña y Ratan</h3><p>El tejido natural de caña y ratán para eventos al aire libre con estilo bohemio y elegante.</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="pc"><div class="pc-img">🌿<img src="fotos/Fotos%20Living%20Rental/Living%20de%20ca%C3%B1a.jpg" alt="Living de caña" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living de caña</div><div class="pc-desc">Sillones caña natural con cojines</div></div></div>
+      <div class="pc"><div class="pc-img">🌿<img src="fotos/Fotos%20Living%20Rental/Living%20de%20ca%C3%B1a%20(2).jpg" alt="Living de caña 2" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living de caña II</div><div class="pc-desc">Variante de living de caña</div></div></div>
+      <div class="pc"><div class="pc-img">🌿<img src="fotos/Fotos%20Living%20Rental/Living%20de%20ca%C3%B1a%20con%20puff.jpg" alt="Living de caña con puff" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living de caña con puff</div><div class="pc-desc">Caña natural con puff incorporado</div></div></div>
+      <div class="pc"><div class="pc-img">🪑<img src="fotos/Fotos%20Living%20Rental/Living%20de%20ca%C3%B1a%20con%20sillas%20MDQ.jpg" alt="Living de caña con sillas MDQ" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living caña con sillas MDQ</div><div class="pc-desc">Combinación caña + sillas MDQ ratán</div></div></div>
+      <div class="pc"><div class="pc-img">🌿<img src="fotos/Fotos%20Living%20Rental/Living%20de%20ca%C3%B1a%20con%20%20sillon%20ratan%20y%20pana.jpg" alt="Living de caña con sillón ratán y pana" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Caña con sillón ratán y pana</div><div class="pc-desc">Mezcla de caña, ratán y tapizado pana</div></div></div>
+    </div>
+  </div>
+
+  <!-- LIVING DE HIERRO -->
+  <div class="cat-panel" id="cat-hierro">
+    <div class="panel-hero">
+      <div class="panel-hero-emoji">⚙️</div>
+      <img src="fotos/Fotos%20Living%20Rental/Living%20de%20hierro.jpg" alt="Living de hierro" onerror="this.style.display='none'">
+      <div class="panel-hero-overlay"></div>
+      <div class="panel-hero-text"><h3>Living de Hierro</h3><p>Estructura hierro en blanco o negro para ambientaciones modernas y corporativas.</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="pc"><div class="pc-img">⚙️<img src="fotos/Fotos%20Living%20Rental/Living%20de%20hierro.jpg" alt="Living de hierro" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living de hierro</div><div class="pc-desc">Living con estructura de hierro</div></div></div>
+    </div>
+  </div>
+
+  <!-- MESAS ALTAS CON BANQUETAS -->
+  <div class="cat-panel" id="cat-mesasaltas">
+    <div class="panel-hero">
+      <div class="panel-hero-emoji">🍸</div>
+      <img src="fotos/Fotos%20Living%20Rental/Mesa%20alta%20con%20banquetas.jpg" alt="Mesa alta con banquetas" onerror="this.style.display='none'">
+      <div class="panel-hero-overlay"></div>
+      <div class="panel-hero-text"><h3>Mesas Altas con Banquetas</h3><p>Mesas altas con banquetas para ambientaciones de cocktail y eventos modernos.</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="pc"><div class="pc-img">🍸<img src="fotos/Fotos%20Living%20Rental/Mesa%20alta%20con%20banquetas.jpg" alt="Mesa alta con banquetas" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa alta con banquetas</div><div class="pc-desc">Mesa alta + banquetas para cocktail</div></div></div>
+      <div class="pc"><div class="pc-img">🍸<img src="fotos/Fotos%20Living%20Rental/Mesa%20alta%20redonda.jpg" alt="Mesa alta redonda" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa alta redonda</div><div class="pc-desc">Mesa alta redonda con banquetas</div></div></div>
+      <div class="pc"><div class="pc-img">🍸<img src="fotos/Fotos%20Living%20Rental/Mesas%20altas.jpg" alt="Mesas altas" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesas altas</div><div class="pc-desc">Set de mesas altas para eventos</div></div></div>
+    </div>
+  </div>
+
+  <!-- MESAS BAR CON SILLAS -->
+  <div class="cat-panel" id="cat-mesasbar">
+    <div class="panel-hero">
+      <div class="panel-hero-emoji">🍺</div>
+      <img src="fotos/Fotos%20Living%20Rental/Mesa%20bar%20hietto%20y%20madera%20con%20silla%20ca%C3%B1a.jpg" alt="Mesa bar hierro y madera con silla caña" onerror="this.style.display='none'">
+      <div class="panel-hero-overlay"></div>
+      <div class="panel-hero-text"><h3>Mesas Bar con Sillas</h3><p>Combinaciones de mesas bar con sillas para ambientaciones tipo cafetería o eventos informales.</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="pc"><div class="pc-img">🍺<img src="fotos/Fotos%20Living%20Rental/Mesa%20bar%20hietto%20y%20madera%20con%20silla%20ca%C3%B1a.jpg" alt="Mesa bar hierro y madera con silla caña" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa bar hierro y madera</div><div class="pc-desc">Mesa bar hierro + tablero madera con silla caña</div></div></div>
+      <div class="pc"><div class="pc-img">☕<img src="fotos/Fotos%20Living%20Rental/Mesa%20cafetin%20con%20sillas%20pana%20verde%20oliva.jpg" alt="Mesa cafetín con sillas pana verde oliva" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa cafetín con sillas pana</div><div class="pc-desc">Mesa cafetín + sillas pana verde oliva</div></div></div>
+      <div class="pc"><div class="pc-img">🪵<img src="fotos/Fotos%20Living%20Rental/Meza%20camping%20con%20bancos%20de%20madera.jpg" alt="Mesa camping con bancos de madera" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa camping con bancos</div><div class="pc-desc">Mesas rectangulares con bancos de madera</div></div></div>
+    </div>
+  </div>
+
+  <!-- MESAS RATONAS -->
+  <div class="cat-panel" id="cat-mesasratonas">
+    <div class="panel-hero">
+      <div class="panel-hero-emoji">☕</div>
+      <img src="fotos/Fotos%20Living%20Rental/Mesa%20ratona%20dorada%20simil%20marmol.jpg" alt="Mesa ratona dorada simil mármol" onerror="this.style.display='none'">
+      <div class="panel-hero-overlay"></div>
+      <div class="panel-hero-text"><h3>Mesas Ratonas</h3><p>Mesas ratonas en distintos estilos: doradas, negras y redondas para completar cualquier living.</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="pc"><div class="pc-img">☕<img src="fotos/Fotos%20Living%20Rental/Mesa%20ratona%20dorada%20simil%20marmol.jpg" alt="Mesa ratona dorada simil mármol" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa ratona dorada simil mármol</div><div class="pc-desc">Mesa ratona dorada con tapa simil mármol</div></div></div>
+      <div class="pc"><div class="pc-img">🖤<img src="fotos/Fotos%20Living%20Rental/Mesa%20ratona%20redonda%20negra.jpg" alt="Mesa ratona redonda negra" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa ratona redonda negra</div><div class="pc-desc">Mesa ratona redonda en negro mate</div></div></div>
+      <div class="pc"><div class="pc-img">☕<img src="fotos/Fotos%20Living%20Rental/Mesa%20ratona%20redonda.jpg" alt="Mesa ratona redonda" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa ratona redonda</div><div class="pc-desc">Mesa ratona redonda clásica</div></div></div>
+    </div>
+  </div>
+
+  <!-- SILLAS -->
+  <div class="cat-panel" id="cat-sillas">
+    <div class="panel-hero">
+      <div class="panel-hero-emoji">🪑</div>
+      <img src="fotos/Fotos%20Living%20Rental/Silla%20Viena%20rat%C3%A1n.jpg" alt="Silla Viena ratán" onerror="this.style.display='none'">
+      <div class="panel-hero-overlay"></div>
+      <div class="panel-hero-text"><h3>Sillas</h3><p>Variedad de sillas para completar cualquier ambientación de evento.</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="pc"><div class="pc-img">🪑<img src="fotos/Fotos%20Living%20Rental/Silla%20Viena%20rat%C3%A1n.jpg" alt="Silla Viena ratán" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Silla Viena ratán</div><div class="pc-desc">Silla Viena con asiento de ratán</div></div></div>
+      <div class="pc"><div class="pc-img">🪑<img src="fotos/Fotos%20Living%20Rental/silla%20valencia%20con%20mesa%20cafetin.jpeg" alt="Silla Valencia con mesa cafetín" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Silla Valencia con mesa cafetín</div><div class="pc-desc">Silla Valencia + mesa cafetín</div></div></div>
     </div>
   </div>
 
@@ -509,15 +490,42 @@ footer{background:var(--txt);padding:30px 52px;display:flex;align-items:center;j
   <div class="cat-panel" id="cat-otros">
     <div class="panel-hero">
       <div class="panel-hero-emoji">✦</div>
-      <img src="https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?w=1200&q=80&fit=crop" alt="Otros">
+      <img src="fotos/Fotos%20Living%20Rental/Gazebo%20de%20madera.jpg" alt="Gazebo de madera" onerror="this.style.display='none'">
       <div class="panel-hero-overlay"></div>
-      <div class="panel-hero-text"><h3>Otros</h3><p>Alfombras, pedestales, materas, iluminación y accesorios para complementar tu ambientación.</p></div>
+      <div class="panel-hero-text"><h3>Otros</h3><p>Complementos y accesorios para completar la ambientación de tu evento.</p></div>
     </div>
     <div class="prod-grid">
-      <div class="pc"><div class="pc-img">🌿<img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=320&q=80&fit=crop" alt="Alfombra yute"></div><div class="pc-body"><div class="pc-name">Alfombra yute</div><div class="pc-desc">Alfombra de yute natural en varios tamaños</div></div></div>
-      <div class="pc"><div class="pc-img">🪴<img src="https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?w=320&q=80&fit=crop" alt="Pedestales blancos"></div><div class="pc-body"><div class="pc-name">Pedestales blancos</div><div class="pc-desc">Columnas blancas para florales y decoración</div></div></div>
-      <div class="pc"><div class="pc-img">💡<img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=320&q=80&fit=crop" alt="Faroles y velas"></div><div class="pc-body"><div class="pc-name">Faroles y linternas</div><div class="pc-desc">Faroles ratán y hierro con velas decorativas</div></div></div>
-      <div class="pc"><div class="pc-img">🌳<img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?w=320&q=80&fit=crop" alt="Plantas tropicales"></div><div class="pc-body"><div class="pc-name">Plantas tropicales</div><div class="pc-desc">Plantas y follaje natural para ambientaciones</div></div></div>
+      <div class="pc"><div class="pc-img">🌳<img src="fotos/Fotos%20Living%20Rental/Gazebo%20de%20madera.jpg" alt="Gazebo de madera" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Gazebo de madera</div><div class="pc-desc">Estructura madera natural con toldo</div></div></div>
+      <div class="pc"><div class="pc-img">⚙️<img src="fotos/Fotos%20Living%20Rental/Estanterias%20de%20hierro.jpg" alt="Estanterías de hierro" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Estanterías de hierro</div><div class="pc-desc">Estanterías decorativas de hierro</div></div></div>
+    </div>
+  </div>
+
+  <!-- SILLONES -->
+  <div class="cat-panel" id="cat-sillones">
+    <div class="panel-hero">
+      <div class="panel-hero-emoji">🛋️</div>
+      <img src="fotos/Fotos%20Living%20Rental/Sillon%20Ratan.jpg" alt="Sillón Ratán" onerror="this.style.display='none'">
+      <div class="panel-hero-overlay"></div>
+      <div class="panel-hero-text"><h3>Sillones</h3><p>Sillones individuales en ratán y pana para completar cualquier living de evento.</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="pc"><div class="pc-img">🛋️<img src="fotos/Fotos%20Living%20Rental/Sillon%20Ratan.jpg" alt="Sillón Ratán" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Sillón Ratán</div><div class="pc-desc">Sillón individual en ratán natural</div></div></div>
+      <div class="pc"><div class="pc-img">🛋️<img src="fotos/Fotos%20Living%20Rental/Sillon%20ratan%20con%20mesa.jpg" alt="Sillón ratán con mesa" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Sillón ratán con mesa</div><div class="pc-desc">Sillón ratán con mesita lateral</div></div></div>
+      <div class="pc"><div class="pc-img">🤎<img src="fotos/Fotos%20Living%20Rental/sillon-pana-1-cuerpo-2-500x500.jpg" alt="Sillón pana 1 cuerpo" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Sillón pana 1 cuerpo</div><div class="pc-desc">Sillón individual tapizado en pana</div></div></div>
+    </div>
+  </div>
+
+  <!-- EVENTOS -->
+  <div class="cat-panel" id="cat-eventos">
+    <div class="panel-hero">
+      <div class="panel-hero-emoji">📸</div>
+      <img src="fotos/Fotos%20Living%20Rental/Autodromo%203.jpg" alt="Autodromo" onerror="this.style.display='none'">
+      <div class="panel-hero-overlay"></div>
+      <div class="panel-hero-text"><h3>Eventos</h3><p>Imágenes de eventos reales donde ambientamos con nuestros muebles.</p></div>
+    </div>
+    <div class="prod-grid">
+      <div class="pc"><div class="pc-img">📸<img src="fotos/Fotos%20Living%20Rental/Autodromo%203.jpg" alt="Autodromo" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Autódromo</div><div class="pc-desc">Ambientación evento en el Autódromo</div></div></div>
+      <div class="pc"><div class="pc-img">💍<img src="fotos/Fotos%20Living%20Rental/Casamiento%20Lobos%20%201.jpg" alt="Casamiento Lobos" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Casamiento Lobos</div><div class="pc-desc">Ambientación casamiento en Lobos</div></div></div>
     </div>
   </div>
 </section>
@@ -538,7 +546,7 @@ footer{background:var(--txt);padding:30px 52px;display:flex;align-items:center;j
 <div class="divider"></div>
 
 <!-- CONTACTO -->
-<section class="sec" id="contacto">
+<section class="sec" id="contacto" style="background:#f9f7fd">
   <div class="reveal"><p class="eyebrow">Contacto</p><h2 class="sec-h">¿Tenés un evento en mente?</h2><p class="sec-sub">Escribinos y te respondemos con una propuesta personalizada.</p></div>
   <div class="cw reveal">
     <div class="cl">
@@ -573,10 +581,10 @@ footer{background:var(--txt);padding:30px 52px;display:flex;align-items:center;j
 <footer>
   <a href="#hero" class="flo">
     <div class="flo-icon">
-      <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="4" y="4" width="15" height="36" rx="2" fill="#C06FD0"/>
-        <rect x="4" y="37" width="44" height="11" rx="2" fill="#C06FD0"/>
-        <path d="M19 4 A15 16 0 0 1 19 36 Z" fill="rgba(255,255,255,0.75)"/>
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="6" y="6" width="14" height="36" rx="2" fill="white" opacity=".85"/>
+        <rect x="6" y="36" width="36" height="6" rx="2" fill="white" opacity=".85"/>
+        <path d="M20 6 h14 a8 8 0 0 1 8 8 v0 a8 8 0 0 1 -8 8 h-14 z" fill="white" opacity=".6"/>
       </svg>
     </div>
     <span class="flo-text">Living Rental</span>
@@ -598,18 +606,13 @@ footer{background:var(--txt);padding:30px 52px;display:flex;align-items:center;j
 </a>
 
 <script>
-// ── NAVBAR SCROLL ──
-window.addEventListener('scroll',()=>{
-  document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>20);
-});
-
 // ── HERO SLIDESHOW ──
 let hIdx = 0;
 const heroPhotos = [
-  'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=900&q=80&fit=crop',
-  'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=900&q=80&fit=crop',
-  'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=900&q=80&fit=crop',
-  'https://images.unsplash.com/photo-1478146059778-26b9deccc4d5?w=900&q=80&fit=crop',
+  'https://via.placeholder.com/600x800/8B2FC9/ffffff?text=Hero1',
+  'https://via.placeholder.com/600x800/7B1FB9/ffffff?text=Hero2',
+  'https://via.placeholder.com/600x800/6B0FA9/ffffff?text=Hero3',
+  'https://via.placeholder.com/600x800/5B0A99/ffffff?text=Hero4',
 ];
 
 function buildDots(){
@@ -654,11 +657,11 @@ const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');
 let W,H,pts=[];
 function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight}
 resize();window.addEventListener('resize',resize);
-for(let i=0;i<80;i++)pts.push({x:Math.random()*1920,y:Math.random()*1080,r:Math.random()*1.2+.4,vx:(Math.random()-.5)*.2,vy:(Math.random()-.5)*.2,a:Math.random()*.5+.2});
+for(let i=0;i<90;i++)pts.push({x:Math.random()*1920,y:Math.random()*1080,r:Math.random()*1.3+.4,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,a:Math.random()*.6+.2});
 function drawP(){
   ctx.clearRect(0,0,W,H);
-  pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(124,58,237,${p.a*.28})`;ctx.fill();});
-  pts.forEach((a,i)=>{for(let j=i+1;j<pts.length;j++){const b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);if(d<110){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle=`rgba(124,58,237,${.06*(1-d/110)})`;ctx.lineWidth=.5;ctx.stroke()}}});
+  pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=`rgba(139,47,201,${p.a*.3})`;ctx.fill();});
+  pts.forEach((a,i)=>{for(let j=i+1;j<pts.length;j++){const b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);if(d<120){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle=`rgba(139,47,201,${.07*(1-d/120)})`;ctx.lineWidth=.5;ctx.stroke()}}});
   requestAnimationFrame(drawP);
 }
 drawP();
