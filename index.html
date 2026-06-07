@@ -11,6 +11,17 @@ html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;background:#fff;color:var(--txt);overflow-x:hidden}
 #particles{position:fixed;inset:0;z-index:0;pointer-events:none}
 
+/* SPLASH */
+#splash{position:fixed;inset:0;z-index:2000;background:#fff;display:flex;align-items:center;justify-content:center;transition:opacity .9s ease,visibility .9s ease}
+#splash.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.splash-inner{text-align:center;animation:splashIn .7s cubic-bezier(.23,1,.32,1) both}
+@keyframes splashIn{from{opacity:0;transform:scale(.75)}to{opacity:1;transform:scale(1)}}
+.splash-icon svg{width:90px;height:90px;margin-bottom:16px}
+.splash-name{font-size:38px;font-weight:900;letter-spacing:-1.5px;background:linear-gradient(135deg,var(--vd),var(--v));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.splash-sub{font-size:13px;color:var(--txt3);margin-top:8px;letter-spacing:2px;text-transform:uppercase}
+.splash-bar{width:60px;height:3px;background:linear-gradient(90deg,var(--vd),var(--v));border-radius:2px;margin:18px auto 0;animation:grow 1.4s ease forwards}
+@keyframes grow{from{width:0}to{width:120px}}
+
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:12px 48px;background:rgba(255,255,255,0.94);backdrop-filter:blur(20px);border-bottom:1px solid rgba(139,47,201,0.1)}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
@@ -110,12 +121,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .cat-tab:hover{border-color:var(--v);color:var(--v)}
 .cat-tab.active{background:linear-gradient(135deg,var(--vd),var(--v));color:#fff;border-color:transparent;box-shadow:0 4px 14px var(--glow)}
 
-/* panel visible/hidden */
 .cat-panel{display:none;max-width:1160px;margin:0 auto;animation:panelIn .35s ease}
 .cat-panel.active{display:block}
 @keyframes panelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
-/* hero de cada panel */
 .panel-hero{position:relative;height:360px;border-radius:22px;overflow:hidden;margin-bottom:18px;background:#f0e8ff}
 .panel-hero-emoji{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:120px;background:linear-gradient(135deg,#f5f0fe,#ede0ff)}
 .panel-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -124,7 +133,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .panel-hero-text h3{font-size:22px;font-weight:800;margin-bottom:6px}
 .panel-hero-text p{font-size:13px;opacity:.75;max-width:500px;line-height:1.6}
 
-/* grid de productos */
 .prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .pc{border-radius:18px;overflow:hidden;background:#fff;border:1px solid rgba(139,47,201,.1);box-shadow:0 2px 12px rgba(139,47,201,.05);transition:transform .35s cubic-bezier(.23,1,.32,1),box-shadow .35s;cursor:default;transform-style:preserve-3d}
 .pc:hover{transform:translateY(-10px) rotateX(4deg) scale(1.02);box-shadow:0 22px 48px rgba(139,47,201,.16)}
@@ -163,12 +171,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:11px}
 .fg{margin-bottom:13px}
 .fl{font-size:11px;font-weight:700;color:var(--txt3);letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:7px}
-.fi{width:100%;padding:12px 14px;border-radius:12px;background:#f8f5fe;border:1px solid rgba(139,47,201,.12);color:var(--txt);font-size:14px;font-family:inherit;outline:none;transition:border-color .2s,box-shadow .2s}
+.fi{width:100%;padding:12px 14px;border-radius:12px;background:#f8f5fe;border:1px solid rgba(139,47,201,.12);color:var(--txt);font-size:14px;font-family:inherit;outline:none;transition:border-color .2s,box-shadow .2s;appearance:none;-webkit-appearance:none}
 .fi:focus{border-color:var(--v);box-shadow:0 0 0 3px rgba(139,47,201,.07);background:#fff}
 .fi::placeholder{color:var(--txt3)}
 textarea.fi{resize:none;height:85px}
+.date-row{display:grid;grid-template-columns:1fr 1.6fr 1.2fr;gap:8px}
+.date-row .fi{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%239490a8'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:28px;cursor:pointer}
 .fbtn{width:100%;padding:14px;border-radius:13px;background:linear-gradient(135deg,var(--vd),var(--v));color:#fff;font-size:14px;font-weight:800;border:none;cursor:pointer;font-family:inherit;box-shadow:0 6px 20px var(--glow);transition:transform .25s,box-shadow .25s}
 .fbtn:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(139,47,201,.38)}
+
+/* CATÁLOGO DESCARGA */
+#descarga{background:#fff;padding:60px 52px;text-align:center;position:relative;z-index:10}
+.dl-box{max-width:560px;margin:0 auto;border:1.5px dashed rgba(139,47,201,.25);border-radius:24px;padding:40px 32px;background:linear-gradient(135deg,rgba(139,47,201,.03),rgba(192,132,252,.04))}
+.dl-icon{font-size:48px;margin-bottom:14px}
+.dl-title{font-size:22px;font-weight:800;color:var(--txt);margin-bottom:8px}
+.dl-sub{font-size:14px;color:var(--txt2);margin-bottom:24px;line-height:1.65}
+.dl-btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:50px;background:linear-gradient(135deg,var(--vd),var(--v));color:#fff;font-size:14px;font-weight:700;text-decoration:none;box-shadow:0 6px 22px var(--glow);transition:transform .25s,box-shadow .25s}
+.dl-btn:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(139,47,201,.4)}
 
 /* FOOTER */
 footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:10}
@@ -201,10 +220,29 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
   .sec{padding:60px 20px}
   footer{flex-direction:column;gap:12px;text-align:center}
   .ig-banner-inner{flex-direction:column;text-align:center}
+  #descarga{padding:40px 20px}
+  .date-row{grid-template-columns:1fr 1fr 1fr}
 }
 </style>
 </head>
 <body>
+
+<!-- SPLASH -->
+<div id="splash">
+  <div class="splash-inner">
+    <div class="splash-icon">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="6" y="6" width="14" height="36" rx="2" fill="#8B2FC9"/>
+        <rect x="6" y="36" width="36" height="6" rx="2" fill="#8B2FC9"/>
+        <path d="M20 6 h14 a8 8 0 0 1 8 8 v0 a8 8 0 0 1 -8 8 h-14 z" fill="#1a1a1a"/>
+      </svg>
+    </div>
+    <div class="splash-name">Living Rental</div>
+    <div class="splash-sub">Alquiler de muebles para eventos</div>
+    <div class="splash-bar"></div>
+  </div>
+</div>
+
 <canvas id="particles"></canvas>
 
 <!-- NAV -->
@@ -247,11 +285,10 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
     <div class="hstats">
       <div><div class="sn" id="c1">0</div><div class="sl">Años de experiencia</div></div>
       <div><div class="sn" id="c2">0</div><div class="sl">Eventos realizados</div></div>
-      <div><div class="sn" id="c3">0</div><div class="sl">Clientes satisfechos</div></div>
     </div>
   </div>
   <div class="hero-right">
-    <img id="heroImg" src="https://via.placeholder.com/600x800/8B2FC9/ffffff?text=Living+Rental" alt="Living Rental evento">
+    <img id="heroImg" src="fotos/Fotos%20Living%20Rental/Living%20Gervasoni.jpg" alt="Living Rental evento">
     <div class="hero-right-overlay"></div>
     <div class="hbf" style="bottom:16%;left:5%"><div class="hbf-l">Colección</div><div class="hbf-v">Caña & Ratán</div></div>
     <div class="hbf" style="top:18%;right:5%;animation-delay:-2.5s"><div class="hbf-l">Temporada</div><div class="hbf-v">2026 ✦</div></div>
@@ -278,18 +315,18 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
   <div class="reveal"><p class="eyebrow">Nuestros eventos</p><h2 class="sec-h">Cada espacio, una historia</h2><p class="sec-sub">Desde bodas íntimas en campos hasta eventos corporativos. Siempre con el mismo nivel de excelencia.</p></div>
 
   <div class="gal-main reveal">
-    <img id="galHero" src="https://via.placeholder.com/1100x500/8B2FC9/ffffff?text=Galeria+Principal" alt="Evento Living Rental">
+    <img src="fotos/Fotos%20Living%20Rental/Autodromo%203.jpg" alt="Evento Living Rental">
     <div class="gal-overlay"></div>
-    <div class="gal-cap"><h3>Living pana beige — Evento tropical exterior</h3><p>Buenos Aires · 2025</p></div>
+    <div class="gal-cap"><h3>Autódromo — Evento corporativo</h3><p>Buenos Aires · 2025</p></div>
   </div>
 
   <div class="gal-grid reveal">
-    <div class="gi tall"><img id="g0" src="https://via.placeholder.com/300x400/8B2FC9/ffffff?text=Img1" alt="Living caña campo"><div class="gi-ov"></div></div>
-    <div class="gi"><img id="g1" src="https://via.placeholder.com/300x200/7B1FB9/ffffff?text=Img2" alt="Sillas Venecia jardín"><div class="gi-ov"></div></div>
-    <div class="gi"><img id="g2" src="https://via.placeholder.com/300x200/6B0FA9/ffffff?text=Img3" alt="Interior hipódromo pana azul"><div class="gi-ov"></div></div>
-    <div class="gi wide"><img id="g3" src="https://via.placeholder.com/600x200/5B0A99/ffffff?text=Img4" alt="Living lino gris interior"><div class="gi-ov"></div></div>
-    <div class="gi"><img id="g4" src="https://via.placeholder.com/300x200/4B0089/ffffff?text=Img5" alt="Living pana negro con flores"><div class="gi-ov"></div></div>
-    <div class="gi"><img id="g5" src="https://via.placeholder.com/300x200/C084FC/ffffff?text=Img6" alt="Living madera exterior"><div class="gi-ov"></div></div>
+    <div class="gi tall"><img src="fotos/Fotos%20Living%20Rental/Living%20de%20ca%C3%B1a.jpg" alt="Living caña"><div class="gi-ov"></div></div>
+    <div class="gi"><img src="fotos/Fotos%20Living%20Rental/living-pana-beige-266x266.jpg" alt="Living pana beige"><div class="gi-ov"></div></div>
+    <div class="gi"><img src="fotos/Fotos%20Living%20Rental/Living%20Madera.jpg" alt="Living madera"><div class="gi-ov"></div></div>
+    <div class="gi wide"><img src="fotos/Fotos%20Living%20Rental/Casamiento%20Lobos%20%201.jpg" alt="Casamiento Lobos"><div class="gi-ov"></div></div>
+    <div class="gi"><img src="fotos/Fotos%20Living%20Rental/Living%20Gervasoni.jpg" alt="Living Gervasoni"><div class="gi-ov"></div></div>
+    <div class="gi"><img src="fotos/Fotos%20Living%20Rental/Mesa%20alta%20con%20banquetas.jpg" alt="Mesa alta con banquetas"><div class="gi-ov"></div></div>
   </div>
 
   <div class="ig-banner reveal">
@@ -321,9 +358,8 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
     <div class="cat-tab" data-cat="mesasbar">🍺 Mesas Bar con Sillas</div>
     <div class="cat-tab" data-cat="mesasratonas">☕ Mesas Ratonas</div>
     <div class="cat-tab" data-cat="sillas">🪑 Sillas</div>
-    <div class="cat-tab" data-cat="otros">✦ Otros</div>
     <div class="cat-tab" data-cat="sillones">🛋️ Sillones</div>
-    <div class="cat-tab" data-cat="eventos">📸 Eventos</div>
+    <div class="cat-tab" data-cat="otros">✦ Otros</div>
   </div>
 
   <!-- LIVING DE LINO -->
@@ -349,7 +385,6 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
     </div>
     <div class="prod-grid">
       <div class="pc"><div class="pc-img">🤎<img src="fotos/Fotos%20Living%20Rental/living-pana-beige-266x266.jpg" alt="Living pana beige" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living pana beige</div><div class="pc-desc">Sillones pana beige con estructura dorada</div></div></div>
-      <div class="pc"><div class="pc-img">💙<img src="fotos/Fotos%20Living%20Rental/Sillon%20pana%20Azul%20con%20sillas%20pana%20verde.jpeg" alt="Sillón pana azul con sillas pana verde" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Sillón pana azul con sillas pana verde</div><div class="pc-desc">Combinación de colores pana azul y verde</div></div></div>
     </div>
   </div>
 
@@ -376,8 +411,6 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
     </div>
     <div class="prod-grid">
       <div class="pc"><div class="pc-img">✨<img src="fotos/Fotos%20Living%20Rental/Living%20Gervasoni.jpg" alt="Living Gervasoni" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living Gervasoni</div><div class="pc-desc">Living completo con sillones gervasoni</div></div></div>
-      <div class="pc"><div class="pc-img">☕<img src="fotos/Fotos%20Living%20Rental/Mesa%20ratona%20gervasoni.jpg" alt="Mesa ratona gervasoni" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa ratona gervasoni</div><div class="pc-desc">Mesa ratona estilo gervasoni</div></div></div>
-      <div class="pc"><div class="pc-img">🌿<img src="fotos/Fotos%20Living%20Rental/Livings%20de%20ca%C3%B1a%20con%20living%20de%20Gervasoni.jpg" alt="Livings de caña con living de Gervasoni" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Caña con Gervasoni</div><div class="pc-desc">Combinación de caña natural y gervasoni</div></div></div>
     </div>
   </div>
 
@@ -411,6 +444,7 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
       <div class="pc"><div class="pc-img">🌿<img src="fotos/Fotos%20Living%20Rental/Living%20de%20ca%C3%B1a%20con%20puff.jpg" alt="Living de caña con puff" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living de caña con puff</div><div class="pc-desc">Caña natural con puff incorporado</div></div></div>
       <div class="pc"><div class="pc-img">🪑<img src="fotos/Fotos%20Living%20Rental/Living%20de%20ca%C3%B1a%20con%20sillas%20MDQ.jpg" alt="Living de caña con sillas MDQ" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living caña con sillas MDQ</div><div class="pc-desc">Combinación caña + sillas MDQ ratán</div></div></div>
       <div class="pc"><div class="pc-img">🌿<img src="fotos/Fotos%20Living%20Rental/Living%20de%20ca%C3%B1a%20con%20%20sillon%20ratan%20y%20pana.jpg" alt="Living de caña con sillón ratán y pana" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Caña con sillón ratán y pana</div><div class="pc-desc">Mezcla de caña, ratán y tapizado pana</div></div></div>
+      <div class="pc"><div class="pc-img">🌿<img src="fotos/Fotos%20Living%20Rental/Livings%20de%20ca%C3%B1a%20con%20living%20de%20Gervasoni.jpg" alt="Caña con Gervasoni" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Caña con Gervasoni</div><div class="pc-desc">Combinación de caña natural y gervasoni</div></div></div>
     </div>
   </div>
 
@@ -453,7 +487,6 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
     <div class="prod-grid">
       <div class="pc"><div class="pc-img">🍺<img src="fotos/Fotos%20Living%20Rental/Mesa%20bar%20hietto%20y%20madera%20con%20silla%20ca%C3%B1a.jpg" alt="Mesa bar hierro y madera con silla caña" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa bar hierro y madera</div><div class="pc-desc">Mesa bar hierro + tablero madera con silla caña</div></div></div>
       <div class="pc"><div class="pc-img">☕<img src="fotos/Fotos%20Living%20Rental/Mesa%20cafetin%20con%20sillas%20pana%20verde%20oliva.jpg" alt="Mesa cafetín con sillas pana verde oliva" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa cafetín con sillas pana</div><div class="pc-desc">Mesa cafetín + sillas pana verde oliva</div></div></div>
-      <div class="pc"><div class="pc-img">🪵<img src="fotos/Fotos%20Living%20Rental/Meza%20camping%20con%20bancos%20de%20madera.jpg" alt="Mesa camping con bancos de madera" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa camping con bancos</div><div class="pc-desc">Mesas rectangulares con bancos de madera</div></div></div>
     </div>
   </div>
 
@@ -466,6 +499,7 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
       <div class="panel-hero-text"><h3>Mesas Ratonas</h3><p>Mesas ratonas en distintos estilos: doradas, negras y redondas para completar cualquier living.</p></div>
     </div>
     <div class="prod-grid">
+      <div class="pc"><div class="pc-img">☕<img src="fotos/Fotos%20Living%20Rental/Mesa%20ratona%20gervasoni.jpg" alt="Mesa ratona gervasoni" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa ratona gervasoni</div><div class="pc-desc">Mesa ratona estilo gervasoni</div></div></div>
       <div class="pc"><div class="pc-img">☕<img src="fotos/Fotos%20Living%20Rental/Mesa%20ratona%20dorada%20simil%20marmol.jpg" alt="Mesa ratona dorada simil mármol" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa ratona dorada simil mármol</div><div class="pc-desc">Mesa ratona dorada con tapa simil mármol</div></div></div>
       <div class="pc"><div class="pc-img">🖤<img src="fotos/Fotos%20Living%20Rental/Mesa%20ratona%20redonda%20negra.jpg" alt="Mesa ratona redonda negra" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa ratona redonda negra</div><div class="pc-desc">Mesa ratona redonda en negro mate</div></div></div>
       <div class="pc"><div class="pc-img">☕<img src="fotos/Fotos%20Living%20Rental/Mesa%20ratona%20redonda.jpg" alt="Mesa ratona redonda" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa ratona redonda</div><div class="pc-desc">Mesa ratona redonda clásica</div></div></div>
@@ -486,20 +520,6 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
     </div>
   </div>
 
-  <!-- OTROS -->
-  <div class="cat-panel" id="cat-otros">
-    <div class="panel-hero">
-      <div class="panel-hero-emoji">✦</div>
-      <img src="fotos/Fotos%20Living%20Rental/Gazebo%20de%20madera.jpg" alt="Gazebo de madera" onerror="this.style.display='none'">
-      <div class="panel-hero-overlay"></div>
-      <div class="panel-hero-text"><h3>Otros</h3><p>Complementos y accesorios para completar la ambientación de tu evento.</p></div>
-    </div>
-    <div class="prod-grid">
-      <div class="pc"><div class="pc-img">🌳<img src="fotos/Fotos%20Living%20Rental/Gazebo%20de%20madera.jpg" alt="Gazebo de madera" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Gazebo de madera</div><div class="pc-desc">Estructura madera natural con toldo</div></div></div>
-      <div class="pc"><div class="pc-img">⚙️<img src="fotos/Fotos%20Living%20Rental/Estanterias%20de%20hierro.jpg" alt="Estanterías de hierro" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Estanterías de hierro</div><div class="pc-desc">Estanterías decorativas de hierro</div></div></div>
-    </div>
-  </div>
-
   <!-- SILLONES -->
   <div class="cat-panel" id="cat-sillones">
     <div class="panel-hero">
@@ -512,20 +532,22 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
       <div class="pc"><div class="pc-img">🛋️<img src="fotos/Fotos%20Living%20Rental/Sillon%20Ratan.jpg" alt="Sillón Ratán" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Sillón Ratán</div><div class="pc-desc">Sillón individual en ratán natural</div></div></div>
       <div class="pc"><div class="pc-img">🛋️<img src="fotos/Fotos%20Living%20Rental/Sillon%20ratan%20con%20mesa.jpg" alt="Sillón ratán con mesa" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Sillón ratán con mesa</div><div class="pc-desc">Sillón ratán con mesita lateral</div></div></div>
       <div class="pc"><div class="pc-img">🤎<img src="fotos/Fotos%20Living%20Rental/sillon-pana-1-cuerpo-2-500x500.jpg" alt="Sillón pana 1 cuerpo" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Sillón pana 1 cuerpo</div><div class="pc-desc">Sillón individual tapizado en pana</div></div></div>
+      <div class="pc"><div class="pc-img">💙<img src="fotos/Fotos%20Living%20Rental/Sillon%20pana%20Azul%20con%20sillas%20pana%20verde.jpeg" alt="Sillón pana azul con sillas pana verde" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Sillón pana azul</div><div class="pc-desc">Sillón pana azul con sillas pana verde</div></div></div>
     </div>
   </div>
 
-  <!-- EVENTOS -->
-  <div class="cat-panel" id="cat-eventos">
+  <!-- OTROS -->
+  <div class="cat-panel" id="cat-otros">
     <div class="panel-hero">
-      <div class="panel-hero-emoji">📸</div>
-      <img src="fotos/Fotos%20Living%20Rental/Autodromo%203.jpg" alt="Autodromo" onerror="this.style.display='none'">
+      <div class="panel-hero-emoji">✦</div>
+      <img src="fotos/Fotos%20Living%20Rental/Gazebo%20de%20madera.jpg" alt="Gazebo de madera" onerror="this.style.display='none'">
       <div class="panel-hero-overlay"></div>
-      <div class="panel-hero-text"><h3>Eventos</h3><p>Imágenes de eventos reales donde ambientamos con nuestros muebles.</p></div>
+      <div class="panel-hero-text"><h3>Otros</h3><p>Complementos y accesorios para completar la ambientación de tu evento.</p></div>
     </div>
     <div class="prod-grid">
-      <div class="pc"><div class="pc-img">📸<img src="fotos/Fotos%20Living%20Rental/Autodromo%203.jpg" alt="Autodromo" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Autódromo</div><div class="pc-desc">Ambientación evento en el Autódromo</div></div></div>
-      <div class="pc"><div class="pc-img">💍<img src="fotos/Fotos%20Living%20Rental/Casamiento%20Lobos%20%201.jpg" alt="Casamiento Lobos" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Casamiento Lobos</div><div class="pc-desc">Ambientación casamiento en Lobos</div></div></div>
+      <div class="pc"><div class="pc-img">🌳<img src="fotos/Fotos%20Living%20Rental/Gazebo%20de%20madera.jpg" alt="Gazebo de madera" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Gazebo de madera</div><div class="pc-desc">Estructura madera natural con toldo</div></div></div>
+      <div class="pc"><div class="pc-img">⚙️<img src="fotos/Fotos%20Living%20Rental/Estanterias%20de%20hierro.jpg" alt="Estanterías de hierro" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Estanterías de hierro</div><div class="pc-desc">Estanterías decorativas de hierro</div></div></div>
+      <div class="pc"><div class="pc-img">🪵<img src="fotos/Fotos%20Living%20Rental/Meza%20camping%20con%20bancos%20de%20madera.jpg" alt="Mesa camping con bancos de madera" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Mesa camping con bancos</div><div class="pc-desc">Mesas rectangulares con bancos de madera</div></div></div>
     </div>
   </div>
 </section>
@@ -552,7 +574,7 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
     <div class="cl">
       <h3>Hablemos 💬</h3>
       <p>Coordinamos todo: muebles, ambientación, transporte y armado. Solo decinos qué necesitás.</p>
-      <div class="ci2"><div class="cico">📞</div><div><div class="cil">WhatsApp</div><div class="civ">(011) 6381-4438</div></div></div>
+      <div class="ci2"><div class="cico">📞</div><div><div class="cil">WhatsApp</div><div class="civ">+54 9 11 6381-4438</div></div></div>
       <div class="ci2"><div class="cico">📧</div><div><div class="cil">Email</div><div class="civ">info@livingrental.com.ar</div></div></div>
       <div class="ci2"><div class="cico">📍</div><div><div class="cil">Ubicación</div><div class="civ">Florida, Buenos Aires</div></div></div>
       <div class="socs">
@@ -566,14 +588,57 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
     </div>
     <div class="cform">
       <div class="frow">
-        <div class="fg"><label class="fl">Nombre</label><input type="text" class="fi" placeholder="Tu nombre"></div>
-        <div class="fg"><label class="fl">WhatsApp / Email</label><input type="text" class="fi" placeholder="Contacto"></div>
+        <div class="fg"><label class="fl">Nombre</label><input id="f-nombre" type="text" class="fi" placeholder="Tu nombre"></div>
+        <div class="fg"><label class="fl">WhatsApp / Email</label><input id="f-contacto" type="text" class="fi" placeholder="Contacto"></div>
       </div>
-      <div class="fg"><label class="fl">Tipo de evento</label><input type="text" class="fi" placeholder="Casamiento, cumpleaños, corporativo..."></div>
-      <div class="fg"><label class="fl">Fecha del evento</label><input type="text" class="fi" placeholder="DD/MM/AAAA"></div>
-      <div class="fg"><label class="fl">Mensaje</label><textarea class="fi" placeholder="Lugar, cantidad de personas, estilo buscado..."></textarea></div>
-      <button class="fbtn">Enviar consulta →</button>
+      <div class="fg"><label class="fl">Tipo de evento</label><input id="f-evento" type="text" class="fi" placeholder="Casamiento, cumpleaños, corporativo..."></div>
+      <div class="fg">
+        <label class="fl">Fecha del evento</label>
+        <div class="date-row">
+          <select id="f-dia" class="fi">
+            <option value="">Día</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+            <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+            <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+            <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+            <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+            <option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+            <option>31</option>
+          </select>
+          <select id="f-mes" class="fi">
+            <option value="">Mes</option>
+            <option value="01">Enero</option><option value="02">Febrero</option>
+            <option value="03">Marzo</option><option value="04">Abril</option>
+            <option value="05">Mayo</option><option value="06">Junio</option>
+            <option value="07">Julio</option><option value="08">Agosto</option>
+            <option value="09">Septiembre</option><option value="10">Octubre</option>
+            <option value="11">Noviembre</option><option value="12">Diciembre</option>
+          </select>
+          <select id="f-anio" class="fi">
+            <option value="">Año</option>
+            <option>2025</option><option>2026</option><option>2027</option>
+            <option>2028</option><option>2029</option><option>2030</option>
+          </select>
+        </div>
+      </div>
+      <div class="fg"><label class="fl">Mensaje</label><textarea id="f-mensaje" class="fi" placeholder="Lugar, cantidad de personas, estilo buscado..."></textarea></div>
+      <button class="fbtn" id="enviarBtn">Enviar consulta por WhatsApp →</button>
     </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DESCARGA CATÁLOGO -->
+<section id="descarga">
+  <div class="dl-box reveal">
+    <div class="dl-icon">📋</div>
+    <div class="dl-title">Descargá nuestro catálogo</div>
+    <div class="dl-sub">Todos nuestros muebles y productos disponibles para alquiler en un solo archivo. Guardalo y compartilo con quien necesites.</div>
+    <a href="catalogo.pdf" download class="dl-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Descargar catálogo PDF
+    </a>
   </div>
 </section>
 
@@ -606,13 +671,18 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
 </a>
 
 <script>
+// ── SPLASH ──
+setTimeout(() => {
+  document.getElementById('splash').classList.add('hidden');
+}, 2000);
+
 // ── HERO SLIDESHOW ──
 let hIdx = 0;
 const heroPhotos = [
-  'https://via.placeholder.com/600x800/8B2FC9/ffffff?text=Hero1',
-  'https://via.placeholder.com/600x800/7B1FB9/ffffff?text=Hero2',
-  'https://via.placeholder.com/600x800/6B0FA9/ffffff?text=Hero3',
-  'https://via.placeholder.com/600x800/5B0A99/ffffff?text=Hero4',
+  'fotos/Fotos%20Living%20Rental/Living%20Gervasoni.jpg',
+  'fotos/Fotos%20Living%20Rental/Living%20Madera.jpg',
+  'fotos/Fotos%20Living%20Rental/Living%20de%20ca%C3%B1a.jpg',
+  'fotos/Fotos%20Living%20Rental/Autodromo%203.jpg',
 ];
 
 function buildDots(){
@@ -652,6 +722,23 @@ document.querySelectorAll('.cat-tab').forEach(tab => {
   });
 });
 
+// ── ENVIAR CONSULTA POR WHATSAPP ──
+document.getElementById('enviarBtn').addEventListener('click', function(){
+  const nombre = document.getElementById('f-nombre').value.trim();
+  const contacto = document.getElementById('f-contacto').value.trim();
+  const evento = document.getElementById('f-evento').value.trim();
+  const dia = document.getElementById('f-dia').value;
+  const mes = document.getElementById('f-mes').value;
+  const anio = document.getElementById('f-anio').value;
+  const mensaje = document.getElementById('f-mensaje').value.trim();
+
+  const fechaStr = (dia && mes && anio) ? `${dia}/${mes}/${anio}` : (dia||mes||anio ? [dia,mes,anio].filter(Boolean).join('/') : 'No especificada');
+
+  const texto = `Hola! Me interesa alquilar muebles para un evento 🎉\n\n*Nombre:* ${nombre||'-'}\n*Contacto:* ${contacto||'-'}\n*Tipo de evento:* ${evento||'-'}\n*Fecha:* ${fechaStr}\n*Mensaje:* ${mensaje||'-'}`;
+
+  window.open('https://wa.me/5491163814438?text=' + encodeURIComponent(texto), '_blank');
+});
+
 // ── PARTICLES ──
 const canvas=document.getElementById('particles'),ctx=canvas.getContext('2d');
 let W,H,pts=[];
@@ -668,7 +755,7 @@ drawP();
 
 // ── CONTADORES ──
 function animC(el,target,suffix){let v=0,inc=target/55;const t=()=>{v=Math.min(v+inc,target);el.textContent=Math.round(v)+suffix;if(v<target)requestAnimationFrame(t)};requestAnimationFrame(t);}
-new IntersectionObserver(e=>{if(e[0].isIntersecting){animC(document.getElementById('c1'),20,'+');animC(document.getElementById('c2'),500,'+');animC(document.getElementById('c3'),100,'%');}},{threshold:.5}).observe(document.querySelector('.hstats'));
+new IntersectionObserver(e=>{if(e[0].isIntersecting){animC(document.getElementById('c1'),20,'+');animC(document.getElementById('c2'),500,'+');}},{threshold:.5}).observe(document.querySelector('.hstats'));
 
 // ── REVEAL SCROLL ──
 const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('up')})},{threshold:.1});
