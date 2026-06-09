@@ -190,11 +190,11 @@ textarea.fi{resize:none;height:85px}
 .dl-btn:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(139,47,201,.4)}
 
 /* FOOTER */
-footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:10}
+footer{background:linear-gradient(135deg,var(--vd),var(--v));padding:28px 52px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:10}
 .flo{display:flex;align-items:center;gap:9px;text-decoration:none}
 .flo-icon svg{width:30px;height:30px;filter:brightness(0) invert(1) opacity(.9)}
 .flo-text{font-size:16px;font-weight:800;color:rgba(255,255,255,.85)}
-.fco{font-size:12px;color:rgba(255,255,255,.38)}
+.fco{font-size:12px;color:rgba(255,255,255,.65)}
 .f-ig{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s}
 .f-ig:hover{color:#ee2a7b}
 
@@ -231,7 +231,7 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
 <div id="splash">
   <div class="splash-inner">
     <div class="splash-icon">
-      <img src="Logo%20Living%20Rental%20sin%20fondo.png" alt="Living Rental" style="width:180px">
+      <img src="Logo%20Living%20Rental%20sin%20fondo.png" alt="Living Rental" style="width:220px;mix-blend-mode:multiply">
     </div>
     <div class="splash-bar"></div>
   </div>
@@ -242,7 +242,7 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
 <!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">
-    <img src="Logo%20Living%20Rental%20sin%20fondo.png" alt="Living Rental" style="height:36px">
+    <img src="Logo%20Living%20Rental%20sin%20fondo.png" alt="Living Rental" style="height:36px;mix-blend-mode:multiply">
   </a>
   <ul class="nav-links">
     <li><a href="#hero">Inicio</a></li>
@@ -353,12 +353,11 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
   <div class="cat-panel active" id="cat-lino">
     <div class="panel-hero">
       <div class="panel-hero-emoji">🌾</div>
-      <img src="fotos/Fotos%20Living%20Rental/Livng%20de%20llino.jpeg" alt="Living de Lino" onerror="this.style.display='none'">
       <div class="panel-hero-overlay"></div>
       <div class="panel-hero-text"><h3>Living de Lino</h3><p>Tapizado lino natural, elegante y atemporal para eventos de interior de alto nivel.</p></div>
     </div>
     <div class="prod-grid">
-      <div class="pc"><div class="pc-img">🌾<img src="fotos/Fotos%20Living%20Rental/Livng%20de%20llino.jpeg" alt="Living de Lino" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living de Lino</div><div class="pc-desc">Sillones tapizados en lino natural</div></div></div>
+      <div class="pc"><div class="pc-img">🌾</div><div class="pc-body"><div class="pc-name">Living de Lino</div><div class="pc-desc">Sillones tapizados en lino natural</div></div></div>
     </div>
   </div>
 
@@ -372,6 +371,7 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
     </div>
     <div class="prod-grid">
       <div class="pc"><div class="pc-img">🤎<img src="fotos/Fotos%20Living%20Rental/living-pana-beige-266x266.jpg" alt="Living pana beige" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living pana beige</div><div class="pc-desc">Sillones pana beige con estructura dorada</div></div></div>
+      <div class="pc"><div class="pc-img">🤎<img src="fotos/Fotos%20Living%20Rental/Livng%20de%20llino.jpeg" alt="Living de pana" onerror="this.style.display='none'"></div><div class="pc-body"><div class="pc-name">Living de pana</div><div class="pc-desc">Living de pana en tono claro</div></div></div>
     </div>
   </div>
 
@@ -541,6 +541,21 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
 
 <div class="divider"></div>
 
+<!-- DESCARGA CATÁLOGO -->
+<section id="descarga">
+  <div class="dl-box reveal">
+    <div class="dl-icon">📋</div>
+    <div class="dl-title">Descargá nuestro catálogo</div>
+    <div class="dl-sub">Todos nuestros muebles y productos disponibles para alquiler en un solo archivo. Guardalo y compartilo con quien necesites.</div>
+    <a href="catalogo.pdf" download class="dl-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Descargar catálogo PDF
+    </a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <!-- PROCESO -->
 <section class="sec" id="proceso" style="background:#fff">
   <div class="reveal"><p class="eyebrow">Cómo trabajamos</p><h2 class="sec-h">Simple y sin complicaciones</h2><p class="sec-sub">En 4 pasos transformamos tu evento en una experiencia única.</p></div>
@@ -614,25 +629,10 @@ footer{background:var(--txt);padding:28px 52px;display:flex;align-items:center;j
   </div>
 </section>
 
-<div class="divider"></div>
-
-<!-- DESCARGA CATÁLOGO -->
-<section id="descarga">
-  <div class="dl-box reveal">
-    <div class="dl-icon">📋</div>
-    <div class="dl-title">Descargá nuestro catálogo</div>
-    <div class="dl-sub">Todos nuestros muebles y productos disponibles para alquiler en un solo archivo. Guardalo y compartilo con quien necesites.</div>
-    <a href="catalogo.pdf" download class="dl-btn">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Descargar catálogo PDF
-    </a>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
   <a href="#hero" class="flo">
-    <img src="Logo%20Living%20Rental%20sin%20fondo.png" alt="Living Rental" style="height:32px;filter:brightness(0) invert(1) opacity(.85)">
+    <img src="Logo%20Living%20Rental%20sin%20fondo.png" alt="Living Rental" style="height:36px;filter:invert(1);mix-blend-mode:screen">
   </a>
   <div class="fco">© 2026 · Florida, Buenos Aires · livingrental.com.ar</div>
   <a href="https://www.instagram.com/livingrental/" target="_blank" class="f-ig">
