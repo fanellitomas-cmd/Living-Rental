@@ -286,8 +286,7 @@ footer{background:linear-gradient(135deg,var(--vd),var(--v));padding:28px 52px;d
   <div class="hero-right">
     <img id="heroImg" src="fotos/Fotos%20Living%20Rental/Living%20Gervasoni.jpg" alt="Living Rental evento">
     <div class="hero-right-overlay"></div>
-    <div class="hbf" style="bottom:16%;left:5%"><div class="hbf-l">Colección</div><div class="hbf-v">Caña & Ratán</div></div>
-    <div class="hbf" style="top:18%;right:5%;animation-delay:-2.5s"><div class="hbf-l">Temporada</div><div class="hbf-v">2026 ✦</div></div>
+    <div class="hbf" style="bottom:16%;left:5%"><div class="hbf-l">Colección</div><div class="hbf-v" id="heroColName">Living Gervasoni</div></div>
     <div class="hero-dots" id="heroDots"></div>
   </div>
 </section>
@@ -678,10 +677,9 @@ setTimeout(() => {
 // ── HERO SLIDESHOW ──
 let hIdx = 0;
 const heroPhotos = [
-  'fotos/Fotos%20Living%20Rental/Living%20Gervasoni.jpg',
-  'fotos/Fotos%20Living%20Rental/Living%20Madera.jpg',
-  'fotos/Fotos%20Living%20Rental/Living%20de%20ca%C3%B1a.jpg',
-  'fotos/Fotos%20Living%20Rental/Autodromo%203.jpg',
+  {src:'fotos/Fotos%20Living%20Rental/Living%20Gervasoni.jpg', col:'Living Gervasoni'},
+  {src:'fotos/Fotos%20Living%20Rental/Living%20Madera.jpg', col:'Living de Madera'},
+  {src:'fotos/Fotos%20Living%20Rental/Living%20de%20ca%C3%B1a.jpg', col:'Living de Caña y Ratán'},
 ];
 
 function buildDots(){
@@ -698,12 +696,16 @@ function setSlide(i){
   hIdx = i;
   const img = document.getElementById('heroImg');
   img.style.opacity = '0';
-  setTimeout(()=>{ img.src = heroPhotos[i]; img.style.opacity='1'; }, 600);
+  setTimeout(()=>{
+    img.src = heroPhotos[i].src;
+    img.style.opacity='1';
+    document.getElementById('heroColName').textContent = heroPhotos[i].col;
+  }, 600);
   document.querySelectorAll('.hdot').forEach((d,j)=>d.classList.toggle('active',j===i));
 }
 
 buildDots();
-document.getElementById('heroImg').src = heroPhotos[0];
+document.getElementById('heroImg').src = heroPhotos[0].src;
 setInterval(()=>setSlide((hIdx+1)%heroPhotos.length), 4500);
 
 // ── CATÁLOGO TABS ──
